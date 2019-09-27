@@ -60,11 +60,11 @@
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <x:Double x:Key="Height">735.5</x:Double>
-        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 360,107.5 360,280 330,280</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,137.5 360,137.5</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID4</x:Reference>
+      <x:Reference>__ReferenceID8</x:Reference>
     </Flowchart.StartNode>
     <FlowStep x:Name="__ReferenceID0">
       <sap:WorkflowViewStateService.ViewState>
@@ -996,7 +996,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="652,4947" sap2010:WorkflowViewState.IdRef="Sequence_37">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="652,5217" sap2010:WorkflowViewState.IdRef="Sequence_37">
               <Sequence.Variables>
                 <Variable x:TypeArguments="sd1:DataTable" Name="readVariableexcel" />
               </Sequence.Variables>
@@ -1012,13 +1012,13 @@
                   </InArgument>
                 </ui:ExcelReadRange.Range>
               </ui:ExcelReadRange>
-              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[readVariableexcel]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="610,4756" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+              <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[readVariableexcel]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="610,5026" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
                 <ui:ForEachRow.Body>
                   <ActivityAction x:TypeArguments="sd1:DataRow">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="sd1:DataRow" Name="row" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="560,4608" sap2010:WorkflowViewState.IdRef="Sequence_36">
+                    <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="560,4878" sap2010:WorkflowViewState.IdRef="Sequence_36">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="ui:GenericValue" Name="setvaluefromexcel" />
                       </Sequence.Variables>
@@ -1041,7 +1041,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BLOOMBERG Tv_cclien'" sap:VirtualizedContainerService.HintSize="434,1130" sap2010:WorkflowViewState.IdRef="WindowScope_11" InformativeScreenshot="d49f008406579169f2c855683a6edeb5" Selector="&lt;wnd app='teamviewer.exe' cls='TV_CClientWindowClass' title='UNAV-BLOOMBERG - TeamViewer - Licencia gratuita (solo uso no com*' /&gt;">
+                        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BLOOMBERG Tv_cclien'" sap:VirtualizedContainerService.HintSize="434,1130" sap2010:WorkflowViewState.IdRef="WindowScope_11" InformativeScreenshot="d49f008406579169f2c855683a6edeb5" Selector="&lt;wnd app='teamviewer.exe' cls='TV_CClientWindowClass' title='Miguel Rodriguez - TeamViewer' /&gt;">
                           <ui:WindowScope.Body>
                             <ActivityAction x:TypeArguments="x:Object">
                               <ActivityAction.Argument>
@@ -1112,7 +1112,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BLOOMBERG Tv_cclien'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="WindowScope_12" InformativeScreenshot="fa507f1e77c398ebe8e1256eb8f6599a" Selector="&lt;wnd app='teamviewer.exe' cls='TV_CClientWindowClass' title='UNAV-BLOOMBERG - TeamViewer - Licencia gratuita (solo uso no com*' /&gt;">
+                        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BLOOMBERG Tv_cclien'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="WindowScope_12" InformativeScreenshot="fa507f1e77c398ebe8e1256eb8f6599a" Selector="&lt;wnd app='teamviewer.exe' cls='TV_CClientWindowClass' title='Miguel Rodriguez - TeamViewer' /&gt;">
                           <ui:WindowScope.Body>
                             <ActivityAction x:TypeArguments="x:Object">
                               <ActivityAction.Argument>
@@ -1140,24 +1140,42 @@
                           </ui:WindowScope.Body>
                         </ui:WindowScope>
                       </Sequence>
-                      <Sequence DisplayName="F12" sap:VirtualizedContainerService.HintSize="518,678" sap2010:WorkflowViewState.IdRef="Sequence_31">
+                      <Sequence DisplayName="F12" sap:VirtualizedContainerService.HintSize="518,824" sap2010:WorkflowViewState.IdRef="Sequence_31">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BLOOMBERG Tv_cclien'" sap:VirtualizedContainerService.HintSize="434,586" sap2010:WorkflowViewState.IdRef="WindowScope_13" InformativeScreenshot="423f8bd143f4c0342040d948d96c6d07" Selector="&lt;wnd app='teamviewer.exe' cls='TV_CClientWindowClass' title='UNAV-BLOOMBERG - TeamViewer - Licencia gratuita (solo uso no com*' /&gt;">
+                        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BLOOMBERG Tv_cclien'" sap:VirtualizedContainerService.HintSize="434,732" sap2010:WorkflowViewState.IdRef="WindowScope_13" InformativeScreenshot="423f8bd143f4c0342040d948d96c6d07" Selector="&lt;wnd app='teamviewer.exe' cls='TV_CClientWindowClass' title='Miguel Rodriguez - TeamViewer' /&gt;">
                           <ui:WindowScope.Body>
                             <ActivityAction x:TypeArguments="x:Object">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,440" sap2010:WorkflowViewState.IdRef="Sequence_30">
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,586" sap2010:WorkflowViewState.IdRef="Sequence_30">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
+                                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'TeamViewer.exe Miguel'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_18" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                                  <ui:ClickImage.CursorPosition>
+                                    <ui:CursorPosition Position="Center">
+                                      <ui:CursorPosition.OffsetX>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetX>
+                                      <ui:CursorPosition.OffsetY>
+                                        <InArgument x:TypeArguments="x:Int32" />
+                                      </ui:CursorPosition.OffsetY>
+                                    </ui:CursorPosition>
+                                  </ui:ClickImage.CursorPosition>
+                                  <ui:ClickImage.Image>
+                                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAKcAAACACAYAAABuv3liAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAASmSURBVHhe7ZxNT9VqGAD5/78PDAYBMUFdGIUFiB9Q7zSwuelyFs+bzCTjwfQsnpRpT5u+nJPtP15eXsb69+/f7ePHj4x5uH2KcHFxsb8ebZ8irDJncUpCcXpCcUpCcXpCcUpCcXpCcUpCcXpCcUpCcXpCcUpCcXpCcUpCcXpCcUpCcXpCcUpCcXrCHud0Pn369PrTbD58+PD602xWmfOEQTmSJnt2drbv0KNtU2S+09PT5pRkvs6cIuzQFVhlzq45JYEjHo62TxFWmbM4JaE4PaE4JaE4PaE4JaE4PaE4JaE4PaE4JaE4PaE4JaE4PaE4JaE4PaE4JaE4PaE4JaE4PWGPczo9vnRZ5vElg3IkTbaFH54rzdmZU4QdugKrzNk1pyRwxMPR9inCKnMWpyQUpycUpyQUpycUpyQUpycUpyQUpycUpyQUpycUpyQUpycUpyQUpycUpyQUpycUpyQUpyfscU6nx5cuyzy+vL6+3q6ursZ6eXm5vXv3bps+J/OxoKI5HZlv/JmTU/zNzc3r/2bz9nE5nVXmHH3NCVxzvsV59J4pQtecntANkSQUpycUpyQUpycUpyQUpycUpyQUpycUpyQUpycUpyQUpycUpyQUpycUpyQUpycUpyQUpyfscU6GQVv44bLMwo8vX75snz9/Huvt7e12fn6+ff369XD7FJmPBSrN6ch8J09PT9vj4+NIf/78uT08POwrVH79+nX4niky3/v375tTkvnGf6w/Pz+3KklmlTm7IZKEbog8oTgloTg9oTgloTg9oTgloTg9oTgloTg9oTgloTg9oTgloTg9oTgloTg9oTgloTg9YY9zMis9IWrhh8vJ3d3d9v3799FypE+f8/7+fl+gwuvR9imuNOfoOH/8+LF9+/ZtP9KL03GpOF/PoGPh+qOPdZdlPtb55/8Xo5PshsgVuluXLE5XKE7J4nSF4pQsTlcoTsnidIXilCxOVyhOyeJ0heKULE5XKE7J4nSFpeKcTH8a7LPKnCe/f//e+GKFqb59qcL0Of/8+bP/0nk92j7FleZc5utops/Z19G47l9H83oGHQvXH32Rl0sLPyS7IXKFVeYsTkkoTk8oTkkoTk8oTkkoTk8oTkkoTk8oTkkoTk8oTkkoTk8oTkkoTk8oTkkoTk8YHScQ59vCj6P3TBGK0xP2OCfDoP3dussyjy9Z8XN1dTXWy8vLfaHC9DmZ7/T0tDklmW/8mRNa+OHSwg/JbohcoRsiyeJ0heKULE5XKE7J4nSF4pQsTlcoTsnidIXilCxOVyhOyeJ0heKULE5XKE7J4nSFpeKcTo8vXZZ5fMmgHEmTPTs723fo0bYpMh8LKprTkfk6c4qwQ1dglTm75pQEjng42j5FWGXO4pSE4vSE4pSE4vSE4pSE4vSE4pSE4vSE4pSE4vSE4pSE4vSE4pSE4vSE4pSE4vSE4pSE4vSEPc7p9PjSZZnHlwzKkTTZFn54rjRnZ04RdugKrDJn15ySwBEPR9unCKvMWZySUJyeUJySUJyeUJySUJyeUJySUJyeUJySUJyeUJySUJyeUJySUJyeUJySUJyeUJySUJye27Zt/wDekyAkbdFyzwAAAABJRU5ErkJggg==" />
+                                  </ui:ClickImage.Image>
+                                  <ui:ClickImage.Target>
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                                  </ui:ClickImage.Target>
+                                </ui:ClickImage>
                                 <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey 'TV_REMOTEDESKTOP_CLASS'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_11" Key="up" KeyModifiers="Win" SendWindowMessages="False" SpecialKey="True">
                                   <ui:SendHotkey.Target>
                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="3dfabd53ea1322ea2858a80f857d9328" Selector="&lt;wnd app='teamviewer.exe' cls='TV_CClientWindowClass' omit:title='Miguel Rodriguez - TeamViewer' /&gt;&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
@@ -1179,19 +1197,19 @@
                           </ui:WindowScope.Body>
                         </ui:WindowScope>
                       </Sequence>
-                      <Sequence DisplayName="saveExcelBCI" sap:VirtualizedContainerService.HintSize="518,1960" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                      <Sequence DisplayName="saveExcelBCI" sap:VirtualizedContainerService.HintSize="518,2084" sap2010:WorkflowViewState.IdRef="Sequence_35">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BLOOMBERG Tv_cclien'" sap:VirtualizedContainerService.HintSize="476,1198" sap2010:WorkflowViewState.IdRef="WindowScope_14" InformativeScreenshot="e32cce50f9719aba69b61a55a791d7ad" Selector="&lt;wnd app='teamviewer.exe' cls='TV_CClientWindowClass' title='UNAV-BLOOMBERG - TeamViewer - Licencia gratuita (solo uso no com*' /&gt;">
+                        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BLOOMBERG Tv_cclien'" sap:VirtualizedContainerService.HintSize="476,1322" sap2010:WorkflowViewState.IdRef="WindowScope_14" InformativeScreenshot="e32cce50f9719aba69b61a55a791d7ad" Selector="&lt;wnd app='teamviewer.exe' cls='TV_CClientWindowClass' title='Miguel Rodriguez - TeamViewer' /&gt;">
                           <ui:WindowScope.Body>
                             <ActivityAction x:TypeArguments="x:Object">
                               <ActivityAction.Argument>
                                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                               </ActivityAction.Argument>
-                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1052" sap2010:WorkflowViewState.IdRef="Sequence_32">
+                              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1176" sap2010:WorkflowViewState.IdRef="Sequence_32">
                                 <sap:WorkflowViewStateService.ViewState>
                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1202,7 +1220,7 @@
                                     <ui:CursorPosition OffsetX="28" OffsetY="8" Position="TopRight" />
                                   </ui:ClickImage.CursorPosition>
                                   <ui:ClickImage.Image>
-                                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAAQCAYAAABgIu2QAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJiSURBVEhL7ZZdSJNRGMe96C4Dyy40yhuHTRYtXKZL5mRFYqiopbQptCUqiRbKJJToA0pCMfrC/AiH6YWgRULfkXmhGM6USjE/IixEZ36kWUuz99e77QUv3tuQBv5uzvM85384/3Oec3F88AIEQcArjDqX/niH0UXnyrrRf4rc6K/n6Db4oVSFoj1RyvCzWvLPPmK830ZedqMkWntkRlfmW0jXl0nZKo7uckypNVK29siMCosPiFeYeNJl5+3IFNNDNnIy6vncX4U5/a6o+MoVYyL7dhkobOr1LBLpqS/AnGJEFeSPylLrrr2qNKLRKAnPcuVTFKr0mMxGwvZEUVlznTBFIFsOlLi1gr2RSJUGrTqL0Zlu1Hors+4ZD/LW/2wlepMG64WLVDa/ZuJDHcdT7vBloJqszBZGHxaxzU/DyTQDPhE50iKwV2cQmdksRgsYd8TS6SqOt3HMdJDQjTEMM49l626aHOJRW/MIjrvmUlAQEk0bToqVAexNzcUUGcDRm+28bOtj2a3wIG/9wj3SdZcQpHx2SLzJI3WS0WbeN5aQUHRfml2l63Y21rI+MZrjvDoO+9ggh9VWFsXtzh1KZZAZCpQp4ggTnaVkiod2cUun4/HkArlBep66Ky6WGfk0KcUeZEaXZxuIVZwWt/PgeFdBkuEGH3srSI4X3+jSGxIUwURpI1BlX5VU0F6ehrm4Q4wcnAoMp2PuOxZtMGHxSURt1zPAJObN0fSIirEXZ0hMtonRby6H7KRhGr615OPrG8r+GAO2+ir8lRbxka0ib/1/yrrRf43XGP3h9JJPiYDAX7j2v7stzyeAAAAAAElFTkSuQmCC" />
+                                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACsAAAASCAYAAADCKCelAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAOzSURBVEhL7ZRvTFVlGMD7Uh/60lpf2pofgkEM0S9utVJ08YEkWaaVFcZcTNKtKQM3bAwvpNTinyEqtaYIZIWY95IgckfDDC8Ud4sLMTXDq6EJdbvee+4959zzh8uv9xzJ1sbtGys33u3Ze973PO/z/t7n333hcJh7RRZhF0oWYRdKEsBKyDEN0zQxDAMlGkWNxYhKEkpMFfN8ZxZe5oG1QEOM9TrZX19HbU093/08SW9rBxOKhLfTzUTovwGeBzbKDDcpT13K1qYTtDUfxXftFp6efgJcZ+eSlbgCoCkKhu35GJG7ZyOouoau65iGjhyRkCJRNMO8u47ICqqq2mc1VRaRMuwIKlHJtiGrdyJq/YtEFWJKdM72v8BWLs/ia+bGbJDhzj6mxf7u9Gy6Q2Iv/CMHKvawv6mPMJoAtkCnGGzvpv2LT/jgUDP+oEl0+gotBxzsbWzhSkDl10vDjHg9NDocnB4NMNZ1kD37qvnhlsaMbnD1exfvVVThOn+NwNVBTg9NIM8BJ4CdomZlOg+nLOWJ5BTcQYnSpFX0zoYoz8ihP65waP0GHMe+4qNdb9IwdBtDUcULxsm5/xEKDneyb9Mq8ho8xPUg355tp6LoVYrqPFw8+TYPPpSN+2Q96WlJ7Go6w6myHDLynSh4KczczJHWNorKa+lp3M7TpV1opoqUGNby7LOcMWy/inFdePQ54WkBuywXT/ASuY+mkbVpPdkvvk7b4CS6EhN6Y7yV+go+8XVjoIEtBc2Exnt5ed1aMlesIP/DPsZPVLD93T6hofD+sixcsmX/G15bXoz/YgtLHkhl3Uu5ZBVWMmm9X9BYoBZbAtgblKU8yadTIjdFJ4jjpzhpDW6RDqXJWfSbAXakZvDxqLCmK8hCR5IUYdhH/mNruaDBT2eryC88TlddAduaffjaSsir6ML32W42lziFboB3kp/i899FlsndvJC2A/9tN888voHLUpyZOPhdVWxpOC/SS0nk2QgxcxpnZTWDf4i2JVnrKToc9YzpIU6JeUQS7/3tHG+sWc3q5zdyZOAXu+C0GT/Hyg5yWXDfHO3maOsFwtNeSjZmkldcx5cDY/iHnDR3eAVsEKejhqHgLLHICIcrjxMUgKOuanKF3cytexnuaaXWOSLapmyzzQP7F7AF+s+1bINbc1hUtRX2O0NTInN6ovJndLutRWQVXVPsWTBA3KpwhahIF82+/O87JElGN0WRij6u6qZtk1lTQOoYc6CWJID9f8oi7ELJPQQb5k/rgep/6f7nIQAAAABJRU5ErkJggg==" />
                                   </ui:ClickImage.Image>
                                   <ui:ClickImage.Target>
                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
@@ -1223,6 +1241,52 @@
                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ac94cfc773ea2b1f5dfb394b3ba3d0ac" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
                                   </ui:TypeInto.Target>
                                 </ui:TypeInto>
+                                <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1">
+                                  <TextExpression.Namespaces>
+                                    <sco:Collection x:TypeArguments="x:String">
+                                      <x:String>System.Activities</x:String>
+                                      <x:String>System.Activities.Statements</x:String>
+                                      <x:String>System.Activities.Expressions</x:String>
+                                      <x:String>System.Activities.Validation</x:String>
+                                      <x:String>System.Activities.XamlIntegration</x:String>
+                                      <x:String>Microsoft.VisualBasic.Activities</x:String>
+                                      <x:String>System</x:String>
+                                      <x:String>System.Collections.Generic</x:String>
+                                      <x:String>System.Data</x:String>
+                                      <x:String>System.Diagnostics</x:String>
+                                      <x:String>System.IO</x:String>
+                                      <x:String>System.Linq</x:String>
+                                      <x:String>System.Management.Automation</x:String>
+                                      <x:String>System.Net.Mail</x:String>
+                                      <x:String>System.Xml</x:String>
+                                      <x:String>System.Xml.Linq</x:String>
+                                      <x:String>UiPath.Library</x:String>
+                                      <x:String>System.Windows.Markup</x:String>
+                                    </sco:Collection>
+                                  </TextExpression.Namespaces>
+                                  <TextExpression.References>
+                                    <sco:Collection x:TypeArguments="AssemblyReference">
+                                      <AssemblyReference>System.Activities</AssemblyReference>
+                                      <AssemblyReference>mscorlib</AssemblyReference>
+                                      <AssemblyReference>System.Data</AssemblyReference>
+                                      <AssemblyReference>System</AssemblyReference>
+                                      <AssemblyReference>System.Core</AssemblyReference>
+                                      <AssemblyReference>System.Management.Automation</AssemblyReference>
+                                      <AssemblyReference>System.Xml</AssemblyReference>
+                                      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+                                      <AssemblyReference>UiPath.Library</AssemblyReference>
+                                      <AssemblyReference>PresentationFramework</AssemblyReference>
+                                      <AssemblyReference>WindowsBase</AssemblyReference>
+                                      <AssemblyReference>PresentationCore</AssemblyReference>
+                                      <AssemblyReference>System.Xaml</AssemblyReference>
+                                    </sco:Collection>
+                                  </TextExpression.References>
+                                  <sap2010:WorkflowViewState.ViewStateManager>
+                                    <sap2010:ViewStateManager>
+                                      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
+                                    </sap2010:ViewStateManager>
+                                  </sap2010:WorkflowViewState.ViewStateManager>
+                                </Delay>
                                 <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_16" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                                   <ui:ClickImage.CursorPosition>
                                     <ui:CursorPosition OffsetX="1" OffsetY="2" Position="Center" />
@@ -1234,15 +1298,61 @@
                                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
                                   </ui:ClickImage.Target>
                                 </ui:ClickImage>
-                                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_17" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                                <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1">
+                                  <TextExpression.Namespaces>
+                                    <sco:Collection x:TypeArguments="x:String">
+                                      <x:String>System.Activities</x:String>
+                                      <x:String>System.Activities.Statements</x:String>
+                                      <x:String>System.Activities.Expressions</x:String>
+                                      <x:String>System.Activities.Validation</x:String>
+                                      <x:String>System.Activities.XamlIntegration</x:String>
+                                      <x:String>Microsoft.VisualBasic.Activities</x:String>
+                                      <x:String>System</x:String>
+                                      <x:String>System.Collections.Generic</x:String>
+                                      <x:String>System.Data</x:String>
+                                      <x:String>System.Diagnostics</x:String>
+                                      <x:String>System.IO</x:String>
+                                      <x:String>System.Linq</x:String>
+                                      <x:String>System.Management.Automation</x:String>
+                                      <x:String>System.Net.Mail</x:String>
+                                      <x:String>System.Xml</x:String>
+                                      <x:String>System.Xml.Linq</x:String>
+                                      <x:String>UiPath.Library</x:String>
+                                      <x:String>System.Windows.Markup</x:String>
+                                    </sco:Collection>
+                                  </TextExpression.Namespaces>
+                                  <TextExpression.References>
+                                    <sco:Collection x:TypeArguments="AssemblyReference">
+                                      <AssemblyReference>System.Activities</AssemblyReference>
+                                      <AssemblyReference>mscorlib</AssemblyReference>
+                                      <AssemblyReference>System.Data</AssemblyReference>
+                                      <AssemblyReference>System</AssemblyReference>
+                                      <AssemblyReference>System.Core</AssemblyReference>
+                                      <AssemblyReference>System.Management.Automation</AssemblyReference>
+                                      <AssemblyReference>System.Xml</AssemblyReference>
+                                      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+                                      <AssemblyReference>UiPath.Library</AssemblyReference>
+                                      <AssemblyReference>PresentationFramework</AssemblyReference>
+                                      <AssemblyReference>WindowsBase</AssemblyReference>
+                                      <AssemblyReference>PresentationCore</AssemblyReference>
+                                      <AssemblyReference>System.Xaml</AssemblyReference>
+                                    </sco:Collection>
+                                  </TextExpression.References>
+                                  <sap2010:WorkflowViewState.ViewStateManager>
+                                    <sap2010:ViewStateManager>
+                                      <sap2010:ViewStateData sap:VirtualizedContainerService.HintSize="200,22" Id="Delay_1" />
+                                    </sap2010:ViewStateManager>
+                                  </sap2010:WorkflowViewState.ViewStateManager>
+                                </Delay>
+                                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_19" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                                   <ui:ClickImage.CursorPosition>
-                                    <ui:CursorPosition OffsetX="7" OffsetY="5" Position="Center" />
+                                    <ui:CursorPosition OffsetX="128" OffsetY="51" Position="TopRight" />
                                   </ui:ClickImage.CursorPosition>
                                   <ui:ClickImage.Image>
-                                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADMAAAAUCAYAAAAgCAWkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJMSURBVFhH3db/SxNxHMfx6K+on/q5+sXop+iXEfVbmAt/KYzCH3I5QizCAvshIkuICvsxVMIiAldr4SaIGlsTxgrHvA1zed7nc1925+3OfcGtIHi1z/xF2bXpaGPzhydj3IfP3o/bHXwOpNNp7JcsMdlstmXaPncZxjRNJBKJlojn+R2gHRh2QZZleDwehMNhhEKhpo3N53K5UCgUKmMCgUDpk1LatCmKAp/Ph3w+Xxnj9/shiiIEQdhzVJShSHTrOyn+qCyVrfkfSZIEr9dbPwyDLM2/x+RCHFoRoZFlvHZPg9Dabkyl6o4hkgox+BSnTt7GciGPxOwY7D0PoRkm9FQKmiqDCATqegq6rkOi1vvsprpjWNrGL4wOnMajT6sYcdrw/IsB8m0SA70OPBsLQN3UMPHAid6+fszFawc1BEOlJFaCH3HTYcP5i0+Q/MOh+/hZDL2aQJ/Dgc/vhnCscxDTxZeXW1VAifU+1WoIRiAiNtZXcL3tEAZnTIC+xZGDR9F57RLsN+5jITyDW1e64LxzF8EfRnP/M4JAoWV4DNvOYHiW4PfmV5w7fALj80uIxeIg/E8sfg/h8eU29H9Ygy4Tiz2q1yAMgayuYWrkJaYWeaiaCW5uFFftHWjvuYeA7w0udLSjq/sFElkd1HKP6jUIw2IgFTLduuuiosIoHpPMlA5ZSZaOTIah1Qxh7QnDFhNCmjY2564w7JgQi8UQjUabNjaf2+3+NyaTyZQegUgk0hJxHIdcLmeNYTEQW9AqbZ+9DNPK7SNMGn8BhVNiYfZSzMQAAAAASUVORK5CYII=" />
+                                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAgCAYAAAABtRhCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJPSURBVEhL7dbLaxNRFAbwuxIFN4LY1KULF9Klgiv/AN3ZtQsXLhREXPhfCCL4QKULFcStG/FZI7XVCj4aK4rWmMRXFUShUTQz93x+ZzozzmQeyaRJVl18cMmde38598xkYkQEw8wq2Pf0BgLLSZvrkOKgQk4T0vrRE9obWD0JqRwYAqhAawkyVYJMGsjSm8JocbBxGfaRgX1O8NWxAYK6sebuGtgqwRrBW4zzpxBaDKxdgDw0cD8wDaJPCc4fHQCoG7qspLwZzntirM4LYZlcy14udI12DzYuwmp1dQN8Yb76VT4j+vJIH0HdSHNvPewCoUWDO1cNrpxaRi0rlpuM63aFdgfWzkF4Z+oR4qfB3t0GpU0c/4pUWemuynxQN3At5P4onHf+cRLcN26wdYsPBr0ss5fNake0M1ifCHunm6eCQZUvDq4A1IWa8gavd7kgE/aSi/LQfLB6BvKYG+pz52+cBXpVzmkvD/tgOpoO6gLLlP/3riOoCZ7LZiOzymywft77zYxWp1FwfI/B6EgKGPYy+02SBPVCTbkEt606jT6H1y8ZTBzn+Ft8zgt7aW9rL3l3p6DpYPV0ondBwM++zxt8fsLxx+R82Mu5Qz4YR+NgWN0InMidGY0e6a6dBsZw3H6kQbxeroP8/pSoMgnWzsLOcpF+ewXbIqygxWP7y+MWPYGUaxT03peV/TmgN9HiN9sI5zUXvc2OsHrR/qbMBXEYe4PXOfz/E0Hj4OI1yIMxyMx2yPSOlWWGmdrGEzuRAQboIBIx4uAQsgr2OYJ/DOLLo+BXz9EAAAAASUVORK5CYII=" />
                                   </ui:ClickImage.Image>
                                   <ui:ClickImage.Target>
-                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
                                   </ui:ClickImage.Target>
                                 </ui:ClickImage>
                               </Sequence>
@@ -1255,7 +1365,7 @@
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BLOOMBERG Tv_cclien'" sap:VirtualizedContainerService.HintSize="434,538" sap2010:WorkflowViewState.IdRef="WindowScope_15" InformativeScreenshot="423f8bd143f4c0342040d948d96c6d07" Selector="&lt;wnd app='teamviewer.exe' cls='TV_CClientWindowClass' title='UNAV-BLOOMBERG - TeamViewer - Licencia gratuita (solo uso no com*' /&gt;">
+                          <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BLOOMBERG Tv_cclien'" sap:VirtualizedContainerService.HintSize="434,538" sap2010:WorkflowViewState.IdRef="WindowScope_15" InformativeScreenshot="423f8bd143f4c0342040d948d96c6d07" Selector="&lt;wnd app='teamviewer.exe' cls='TV_CClientWindowClass' title='Miguel Rodriguez - TeamViewer' /&gt;">
                             <ui:WindowScope.Body>
                               <ActivityAction x:TypeArguments="x:Object">
                                 <ActivityAction.Argument>
@@ -1275,7 +1385,7 @@
                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="d3b946f7bb79b85187ddd8fe7a319b9b" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
                                     </ui:Click.Target>
                                   </ui:Click>
-                                  <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey 'TV_REMOTEDESKTOP_CLASS'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_15" Key="f4" KeyModifiers="Alt" SendWindowMessages="False" SpecialKey="True">
+                                  <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey 'TV_REMOTEDESKTOP_CLASS'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_15" Key="f4" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="True">
                                     <ui:SendHotkey.Target>
                                       <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="d3b946f7bb79b85187ddd8fe7a319b9b" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
                                     </ui:SendHotkey.Target>
@@ -1320,7 +1430,7 @@
         <x:Reference>__ReferenceID4</x:Reference>
       </FlowStep.Next>
     </FlowStep>
-    <FlowStep>
+    <FlowStep x:Name="__ReferenceID8">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">160,104.5</av:Point>

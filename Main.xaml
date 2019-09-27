@@ -65,7 +65,7 @@
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <x:Double x:Key="Height">2530.5942762482118</x:Double>
         <x:Double x:Key="Width">1190</x:Double>
-        <av:PointCollection x:Key="ConnectorLocation">450,87.5 450,117.5 420,117.5 420,174.02</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">450,87.5 450,117.5 550,117.5 550,199.52 520,199.52</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
@@ -98,7 +98,7 @@
           <av:PointCollection x:Key="ConnectorLocation">420,225.02 420,255.02 430,255.02 430,284.5</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Bloomberg.xaml">
+      <ui:InvokeWorkflowFile ContinueOnError="{x:Null}" DisplayName="Invoke Workflow File" sap:VirtualizedContainerService.HintSize="334,87" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="Bloomberg.xaml">
         <ui:InvokeWorkflowFile.Arguments>
           <scg:Dictionary x:TypeArguments="x:String, Argument" />
         </ui:InvokeWorkflowFile.Arguments>
@@ -131,6 +131,48 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </ui:InvokeWorkflowFile>
+    </FlowStep>
+    <FlowStep>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <av:Point x:Key="ShapeLocation">330,494.5</av:Point>
+          <av:Size x:Key="ShapeSize">200,66</av:Size>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+      <Sequence DisplayName="Desktop" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_2">
+        <sap:WorkflowViewStateService.ViewState>
+          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          </scg:Dictionary>
+        </sap:WorkflowViewStateService.ViewState>
+        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'MiguelRod Tv_cclien'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="4a1c6415f18be5d7fa2b50f18a45733a" Selector="&lt;wnd app='teamviewer.exe' cls='TV_CClientWindowClass' title='Miguel Rodriguez - TeamViewer' /&gt;">
+          <ui:WindowScope.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,198" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                  <ui:ClickImage.CursorPosition>
+                    <ui:CursorPosition OffsetX="128" OffsetY="51" Position="TopRight" />
+                  </ui:ClickImage.CursorPosition>
+                  <ui:ClickImage.Image>
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABwAAAAgCAYAAAABtRhCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJPSURBVEhL7dbLaxNRFAbwuxIFN4LY1KULF9Klgiv/AN3ZtQsXLhREXPhfCCL4QKULFcStG/FZI7XVCj4aK4rWmMRXFUShUTQz93x+ZzozzmQeyaRJVl18cMmde38598xkYkQEw8wq2Pf0BgLLSZvrkOKgQk4T0vrRE9obWD0JqRwYAqhAawkyVYJMGsjSm8JocbBxGfaRgX1O8NWxAYK6sebuGtgqwRrBW4zzpxBaDKxdgDw0cD8wDaJPCc4fHQCoG7qspLwZzntirM4LYZlcy14udI12DzYuwmp1dQN8Yb76VT4j+vJIH0HdSHNvPewCoUWDO1cNrpxaRi0rlpuM63aFdgfWzkF4Z+oR4qfB3t0GpU0c/4pUWemuynxQN3At5P4onHf+cRLcN26wdYsPBr0ss5fNake0M1ifCHunm6eCQZUvDq4A1IWa8gavd7kgE/aSi/LQfLB6BvKYG+pz52+cBXpVzmkvD/tgOpoO6gLLlP/3riOoCZ7LZiOzymywft77zYxWp1FwfI/B6EgKGPYy+02SBPVCTbkEt606jT6H1y8ZTBzn+Ft8zgt7aW9rL3l3p6DpYPV0ondBwM++zxt8fsLxx+R82Mu5Qz4YR+NgWN0InMidGY0e6a6dBsZw3H6kQbxeroP8/pSoMgnWzsLOcpF+ewXbIqygxWP7y+MWPYGUaxT03peV/TmgN9HiN9sI5zUXvc2OsHrR/qbMBXEYe4PXOfz/E0Hj4OI1yIMxyMx2yPSOlWWGmdrGEzuRAQboIBIx4uAQsgr2OYJ/DOLLo+BXz9EAAAAASUVORK5CYII=" />
+                  </ui:ClickImage.Image>
+                  <ui:ClickImage.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:ClickImage.Target>
+                </ui:ClickImage>
+              </Sequence>
+            </ActivityAction>
+          </ui:WindowScope.Body>
+        </ui:WindowScope>
+      </Sequence>
     </FlowStep>
   </Flowchart>
 </Activity>
