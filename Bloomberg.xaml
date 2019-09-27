@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Bloomberg" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/cv" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:uc="clr-namespace:UiPath.CV;assembly=UiPath.CV" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Bloomberg" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=mscorlib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing" xmlns:sd1="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="rutaRepo" Type="InArgument(x:String)" />
   </x:Members>
@@ -68,49 +68,80 @@
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <x:Double x:Key="Height">735.5</x:Double>
-        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 230,107.5 230,146.58</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 360,107.5 360,300 330,300</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID7</x:Reference>
+      <x:Reference>__ReferenceID1</x:Reference>
     </Flowchart.StartNode>
     <FlowStep x:Name="__ReferenceID0">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">70,584.5</av:Point>
+          <av:Point x:Key="ShapeLocation">130,377</av:Point>
           <av:Size x:Key="ShapeSize">200,66</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">170,650.5 190,650.5 190,664.02</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="closeExcelFWR" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_24">
+      <Sequence DisplayName="saveExcelFWD" sap:VirtualizedContainerService.HintSize="476,1144" sap2010:WorkflowViewState.IdRef="Sequence_22">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BLOOMBERG Tv_cclien'" sap:VirtualizedContainerService.HintSize="414,570" sap2010:WorkflowViewState.IdRef="WindowScope_10" InformativeScreenshot="423f8bd143f4c0342040d948d96c6d07" Selector="&lt;wnd app='teamviewer.exe' cls='TV_CClientWindowClass' title='Miguel Rodriguez - TeamViewer' /&gt;">
+        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BLOOMBERG Tv_cclien'" sap:VirtualizedContainerService.HintSize="434,1052" sap2010:WorkflowViewState.IdRef="WindowScope_8" InformativeScreenshot="e32cce50f9719aba69b61a55a791d7ad" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' omit:title='grid1_doqsnc1n - Excel' /&gt;">
           <ui:WindowScope.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,424" sap2010:WorkflowViewState.IdRef="Sequence_23">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,906" sap2010:WorkflowViewState.IdRef="Sequence_19">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_10" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey 'TV_REMOTEDESKTOP_CLASS'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_7" Key="f12" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+                  <ui:SendHotkey.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="31e65a22639363dcfe9fb22737ed228e" Selector="&lt;uia omit:cls='XLMAIN' omit:name='grid1_ukkqh5cw - Excel' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:SendHotkey.Target>
+                </ui:SendHotkey>
+                <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'TV_REMOTEDESKTOP_CLASS'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_5" SendWindowMessages="False" SimulateType="False" Text="bot\forward.xlsx[k(enter)]">
+                  <ui:TypeInto.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ac94cfc773ea2b1f5dfb394b3ba3d0ac" Selector="&lt;wnd app='excel.exe' cls='#32770' title='Save As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:TypeInto.Target>
+                </ui:TypeInto>
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_23" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                   <ui:Click.CursorPosition>
-                    <ui:CursorPosition OffsetX="38" OffsetY="130" Position="TopLeft" />
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
                   </ui:Click.CursorPosition>
                   <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="d3b946f7bb79b85187ddd8fe7a319b9b" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="813a3fbabd5bcf783eb12f61b799b8fe" Selector="&lt;wnd app='excel.exe' cls='#32770' title='Save As' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" WaitForReady="INTERACTIVE" />
                   </ui:Click.Target>
                 </ui:Click>
-                <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey 'TV_REMOTEDESKTOP_CLASS'" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,154" sap2010:WorkflowViewState.IdRef="SendHotkey_10" Key="f4" KeyModifiers="Alt" SendWindowMessages="False" SpecialKey="True">
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_24" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                  <ui:Click.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:Click.CursorPosition>
+                  <ui:Click.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="df39d12acfa566cc8a0dd361c804b6bc" Selector="&lt;wnd app='excel.exe' cls='#32770' title='Confirm Save As' /&gt;&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Yes' cls='Button' title='&amp;amp;Yes' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:Click.Target>
+                </ui:Click>
+                <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey 'TV_REMOTEDESKTOP_CLASS'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_13" Key="f4" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="True">
                   <ui:SendHotkey.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="d3b946f7bb79b85187ddd8fe7a319b9b" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="31e65a22639363dcfe9fb22737ed228e" Selector="&lt;uia omit:cls='XLMAIN' omit:name='grid1_doqsnc1n - Excel' /&gt;" WaitForReady="INTERACTIVE" />
                   </ui:SendHotkey.Target>
                 </ui:SendHotkey>
               </Sequence>
@@ -118,228 +149,13 @@
           </ui:WindowScope.Body>
         </ui:WindowScope>
       </Sequence>
-      <FlowStep.Next>
-        <FlowStep x:Name="__ReferenceID4">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">90,664.02</av:Point>
-              <av:Size x:Key="ShapeSize">200,51</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">290,689.52 320,689.52 320,699.52 340,699.52</av:PointCollection>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Close Window" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="CloseWindow_1" UseWindow="[TV]" WaitForReady="INTERACTIVE">
-            <sap:WorkflowViewStateService.ViewState>
-              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-              </scg:Dictionary>
-            </sap:WorkflowViewStateService.ViewState>
-          </ui:CloseWindow>
-          <FlowStep.Next>
-            <FlowStep x:Name="__ReferenceID5">
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">340,674.02</av:Point>
-                  <av:Size x:Key="ShapeSize">200,51</av:Size>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-              <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="Click_11" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-                <ui:Click.CursorPosition>
-                  <ui:CursorPosition Position="Center">
-                    <ui:CursorPosition.OffsetX>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:CursorPosition.OffsetX>
-                    <ui:CursorPosition.OffsetY>
-                      <InArgument x:TypeArguments="x:Int32" />
-                    </ui:CursorPosition.OffsetY>
-                  </ui:CursorPosition>
-                </ui:Click.CursorPosition>
-                <ui:Click.Target>
-                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="27f0dbf7efdc92db8c681582662f4b9a" Selector="&lt;wnd app='teamviewer.exe' cls='#32770' title='Cerrar conexiones' /&gt;&lt;wnd ctrlid='343' title='Cerrar todas las conexiones' /&gt;" WaitForReady="INTERACTIVE" />
-                </ui:Click.Target>
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-              </ui:Click>
-            </FlowStep>
-          </FlowStep.Next>
-        </FlowStep>
-      </FlowStep.Next>
     </FlowStep>
     <FlowStep x:Name="__ReferenceID1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">150,504.5</av:Point>
+          <av:Point x:Key="ShapeLocation">130,267</av:Point>
           <av:Size x:Key="ShapeSize">200,66</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">250,570.5 170,570.5 170,584.5</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="saveExcelFWD" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_22">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BLOOMBERG Tv_cclien'" sap:VirtualizedContainerService.HintSize="436,1230" sap2010:WorkflowViewState.IdRef="WindowScope_8" InformativeScreenshot="e32cce50f9719aba69b61a55a791d7ad" Selector="&lt;wnd app='teamviewer.exe' cls='TV_CClientWindowClass' title='Miguel Rodriguez - TeamViewer' /&gt;">
-          <ui:WindowScope.Body>
-            <ActivityAction x:TypeArguments="x:Object">
-              <ActivityAction.Argument>
-                <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-              </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,1084" sap2010:WorkflowViewState.IdRef="Sequence_19">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="ClickImage_11" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
-                  <ui:ClickImage.CursorPosition>
-                    <ui:CursorPosition OffsetX="28" OffsetY="8" Position="TopRight" />
-                  </ui:ClickImage.CursorPosition>
-                  <ui:ClickImage.Image>
-                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACoAAAAQCAYAAABgIu2QAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAJiSURBVEhL7ZZdSJNRGMe96C4Dyy40yhuHTRYtXKZL5mRFYqiopbQptCUqiRbKJJToA0pCMfrC/AiH6YWgRULfkXmhGM6USjE/IixEZ36kWUuz99e77QUv3tuQBv5uzvM85384/3Oec3F88AIEQcArjDqX/niH0UXnyrrRf4rc6K/n6Db4oVSFoj1RyvCzWvLPPmK830ZedqMkWntkRlfmW0jXl0nZKo7uckypNVK29siMCosPiFeYeNJl5+3IFNNDNnIy6vncX4U5/a6o+MoVYyL7dhkobOr1LBLpqS/AnGJEFeSPylLrrr2qNKLRKAnPcuVTFKr0mMxGwvZEUVlznTBFIFsOlLi1gr2RSJUGrTqL0Zlu1Hors+4ZD/LW/2wlepMG64WLVDa/ZuJDHcdT7vBloJqszBZGHxaxzU/DyTQDPhE50iKwV2cQmdksRgsYd8TS6SqOt3HMdJDQjTEMM49l626aHOJRW/MIjrvmUlAQEk0bToqVAexNzcUUGcDRm+28bOtj2a3wIG/9wj3SdZcQpHx2SLzJI3WS0WbeN5aQUHRfml2l63Y21rI+MZrjvDoO+9ggh9VWFsXtzh1KZZAZCpQp4ggTnaVkiod2cUun4/HkArlBep66Ky6WGfk0KcUeZEaXZxuIVZwWt/PgeFdBkuEGH3srSI4X3+jSGxIUwURpI1BlX5VU0F6ehrm4Q4wcnAoMp2PuOxZtMGHxSURt1zPAJObN0fSIirEXZ0hMtonRby6H7KRhGr615OPrG8r+GAO2+ir8lRbxka0ib/1/yrrRf43XGP3h9JJPiYDAX7j2v7stzyeAAAAAAElFTkSuQmCC" />
-                  </ui:ClickImage.Image>
-                  <ui:ClickImage.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
-                  </ui:ClickImage.Target>
-                </ui:ClickImage>
-                <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey 'TV_REMOTEDESKTOP_CLASS'" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,154" sap2010:WorkflowViewState.IdRef="SendHotkey_7" Key="a" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="False">
-                  <ui:SendHotkey.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="31e65a22639363dcfe9fb22737ed228e" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
-                  </ui:SendHotkey.Target>
-                </ui:SendHotkey>
-                <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey 'TV_REMOTEDESKTOP_CLASS'" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,154" sap2010:WorkflowViewState.IdRef="SendHotkey_8" Key="x" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="False">
-                  <ui:SendHotkey.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="494bdd262d713a7adcc3ad7e7ffe53e5" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
-                  </ui:SendHotkey.Target>
-                </ui:SendHotkey>
-                <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'TV_REMOTEDESKTOP_CLASS'" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,134" sap2010:WorkflowViewState.IdRef="TypeInto_5" SendWindowMessages="False" SimulateType="False" Text="bot\forward.xlsx[k(enter)]">
-                  <ui:TypeInto.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="ac94cfc773ea2b1f5dfb394b3ba3d0ac" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
-                  </ui:TypeInto.Target>
-                </ui:TypeInto>
-                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="ClickImage_12" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
-                  <ui:ClickImage.CursorPosition>
-                    <ui:CursorPosition OffsetX="1" OffsetY="2" Position="Center" />
-                  </ui:ClickImage.CursorPosition>
-                  <ui:ClickImage.Image>
-                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAD8AAAAbCAYAAADLYlf/AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAMRSURBVFhH7Zf/SxNhHMf7A/oLsm9Y/RBEVoZFQtAXCCztl75YPximQf1gWVQWqLFoYYio+1JCo4KgwlSMoFJypEIYta2NVJxz283b3Pe73W1rmfnunm2Cy0Fbs4xtb3hx9/DcfZ57PXc83LMMGZysfKYmK5+pycrPj1KpRGNjI1paWtKK5uZm2O32qGUkMfI6nQ5yuTzaSq84HA7U1dVFW5HEyKtUKqjV6mgr/UK+gPmJkSfiZALSNQnJcxwHr9ebOgyLUICBZqgfPT3vQTm98LFM/Gv/MiStra3h41ziyvt8vrgFkoUPBvDp/m2UlFXiwqkyiLtH8C3ohz8QQMDPgWFZcHNjCRPFc6xwzkb6AzyYX+r9KR6PJ+yXkDzPCwMzTIqwmJ7+ioaKvah9SYXrcxwPt+kLXnV3oHtAC8ZFQasbAcsHEXKb0K8y4sesF31Cf3vnINjvQfji1k4OMgEkv5Un2Gw20DSdMlMOF0aHnuJI4RacqJHDwU2DUvei5U4N9u8swuPn7dhzrBxmzywMDw9j943X6Gu4hJPVYohLD0L0jobXbo1bOxksFgtCoRAkEknUNJIF8hqNBkajEQaDYRGYwKTNAY/TikdVhSg8/wz2N20o2JWPNctXQfRWhycVlZAM9OPa6csYtepwLm8D1u0oQN7GXFTcHYSDNsepmxx6vR5+vz9x+YmJiZQxC3WUL7pg4IGx9ovYfPw6qotL0DXpEqQP4WrHCIIaGbbll+KsWAoPr0fV+tW4+cEffp6Am45bN1nGx8f/vTxFW9GruIKtOTlYua8cn80ufOy8he15m1B89AweDAyD8VGoLS/CvZ5h2Kx2+KeUOJCbi7WrV6Cijbx5Km7tZFgSeQJF2+EhC4/bCcpsEtpT8AgLkNvlBE2ZhGtM4bXBaiHnwj2mSbijC9ViiBOWTP5/IGF58n8/d0O6MDY2hmAwCJlMFjWNJEZeq9VCoVBgZmYmvAMim4F0gfzo1NfXR00jiZEnIfJNTU3hWZJKpWkB2amKRKLwlz0/C+QzKVn5TE1WPjMD/AR/9sZUpkB/swAAAABJRU5ErkJggg==" />
-                  </ui:ClickImage.Image>
-                  <ui:ClickImage.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
-                  </ui:ClickImage.Target>
-                </ui:ClickImage>
-                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="ClickImage_13" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
-                  <ui:ClickImage.CursorPosition>
-                    <ui:CursorPosition OffsetX="7" OffsetY="5" Position="Center" />
-                  </ui:ClickImage.CursorPosition>
-                  <ui:ClickImage.Image>
-                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADcAAAAaCAYAAAAT6cSuAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAL6SURBVFhH7ZfvSxNxHMf9C4Ke9GBgGfUwRpEV1VN91JMkpaAwgx4IkpAaaD0qTIZIuQlSCTYLqyWbPwYlJUZEv0Mcwyi33dyvm+5ut9tts422vbvv7aIfnG6nEXP4hhf3ve3ufZ/39/vdd98rQwmrzOfzoVQp7ZGTjyWpzXAbVZvhiDiOQzgcLlp4npcr/aW84TKZDAYGBmA0GmGxWGA2m4uO0dFR9Pf3w2QyyVXnlDdcKBTC4OCgfFbc6uzslFs5FRRufHxcPitu6fV6uZVTQeHGxsakdjqdVkUmC3wLL8AdSUj3I5sGRdNIke/+una9EPX29krHnyp45BKJBFiWVQUXXcbS+25UHulAWPSKOV6h7mwLvFwcQiyGeDyOaERcqDgeMbEdE6Lgwspe+SAB1zRyJFwymUQkElEJj5To8ejiYXS9iGOq5wQuW7ziJ8v48m4Kw8Nm2BZYxFk3JkeGYZ58CToiBuaVvFYnm82uLdzExITUO2Qz6vf7VUEvMnB9tKL5Qh1qqurxicvA+fYeGmoa0XPlEhq6HsB8sxEnzzWj+9Z9fPYyoAPKXitB6iIzy2AwyFXnVFA4q9WKYDAIh8MBp9OpDpcbTGAeTYe2ov62HQLP4fmN09i2pQIHD2ix+9R1vDG2oPp4E8xPpzFPeUG5FHxWgdQVjUbR19cnV52TqnDEyOVyqYQCLU47fe0xdDycAcuwmL5zHtqqa7kHpASEhO9AcAbVR7UwvRZfVxYoBZ+VIXUJgvD/w9Hi6phI8nhm6MHIBz+W4zEwjAd3W2uxa0c5ymuv4onuDDTl21Hf+hguNgC3gs9q/JNwxIiiqIIhwXQ6HSoqdmLv/krs0+6BRqPB13kHFhlO2jLx7CL84u+StJklMZiCTz5IuHVNS7Kg2Gw22O12VZAHBwKBP5ibm1O8dq3Mzs4ilUqpXy3JcLe3t0sjR3pH6u0iIyb+Z5IOa2trk6vOKW84Io/HI+0vyea5WBkaGpJC/q6Cwm1UbYbbqCrhcMAPcd7+3M+93wsAAAAASUVORK5CYII=" />
-                  </ui:ClickImage.Image>
-                  <ui:ClickImage.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
-                  </ui:ClickImage.Target>
-                </ui:ClickImage>
-              </Sequence>
-            </ActivityAction>
-          </ui:WindowScope.Body>
-        </ui:WindowScope>
-        <Sequence DisplayName="closeExcelBCI" sap:VirtualizedContainerService.HintSize="436,694" sap2010:WorkflowViewState.IdRef="Sequence_21">
-          <sap:WorkflowViewStateService.ViewState>
-            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-            </scg:Dictionary>
-          </sap:WorkflowViewStateService.ViewState>
-          <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BLOOMBERG Tv_cclien'" sap:VirtualizedContainerService.HintSize="414,570" sap2010:WorkflowViewState.IdRef="WindowScope_9" InformativeScreenshot="423f8bd143f4c0342040d948d96c6d07" Selector="&lt;wnd app='teamviewer.exe' cls='TV_CClientWindowClass' title='Miguel Rodriguez - TeamViewer' /&gt;">
-            <ui:WindowScope.Body>
-              <ActivityAction x:TypeArguments="x:Object">
-                <ActivityAction.Argument>
-                  <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-                </ActivityAction.Argument>
-                <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,424" sap2010:WorkflowViewState.IdRef="Sequence_20">
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                  <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_9" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-                    <ui:Click.CursorPosition>
-                      <ui:CursorPosition OffsetX="38" OffsetY="130" Position="TopLeft" />
-                    </ui:Click.CursorPosition>
-                    <ui:Click.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="d3b946f7bb79b85187ddd8fe7a319b9b" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
-                    </ui:Click.Target>
-                  </ui:Click>
-                  <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey 'TV_REMOTEDESKTOP_CLASS'" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,154" sap2010:WorkflowViewState.IdRef="SendHotkey_9" Key="f4" KeyModifiers="Alt" SendWindowMessages="False" SpecialKey="True">
-                    <ui:SendHotkey.Target>
-                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="d3b946f7bb79b85187ddd8fe7a319b9b" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
-                    </ui:SendHotkey.Target>
-                  </ui:SendHotkey>
-                </Sequence>
-              </ActivityAction>
-            </ui:WindowScope.Body>
-          </ui:WindowScope>
-        </Sequence>
-      </Sequence>
-      <FlowStep.Next>
-        <x:Reference>__ReferenceID0</x:Reference>
-      </FlowStep.Next>
-    </FlowStep>
-    <FlowStep x:Name="__ReferenceID2">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">120,414.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,66</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">220,480.5 250,480.5 250,504.5</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="F12Frwd" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_18">
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BLOOMBERG Tv_cclien'" sap:VirtualizedContainerService.HintSize="414,570" sap2010:WorkflowViewState.IdRef="WindowScope_7" InformativeScreenshot="df2046a0b6527bf92b98597f2eb669bb" Selector="&lt;wnd app='teamviewer.exe' cls='TV_CClientWindowClass' title='Miguel Rodriguez - TeamViewer' /&gt;">
-          <ui:WindowScope.Body>
-            <ActivityAction x:TypeArguments="x:Object">
-              <ActivityAction.Argument>
-                <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
-              </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="336,424" sap2010:WorkflowViewState.IdRef="Sequence_17">
-                <sap:WorkflowViewStateService.ViewState>
-                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                  </scg:Dictionary>
-                </sap:WorkflowViewStateService.ViewState>
-                <ui:Click ClickType="CLICK_SINGLE" DelayBefore="1000" DelayMS="1000" DisplayName="Click 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="314,106" sap2010:WorkflowViewState.IdRef="Click_8" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-                  <ui:Click.CursorPosition>
-                    <ui:CursorPosition OffsetX="458" OffsetY="351" Position="TopLeft" />
-                  </ui:Click.CursorPosition>
-                  <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="1bf789b9c3fe7e5ed7ac4e6dbbd9e7c5" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
-                  </ui:Click.Target>
-                </ui:Click>
-                <ui:SendHotkey DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="1000" DelayMS="1000" DisplayName="Send Hotkey 'TV_REMOTEDESKTOP_CLASS'" EmptyField="False" sap:VirtualizedContainerService.HintSize="314,154" sap2010:WorkflowViewState.IdRef="SendHotkey_6" Key="f12" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
-                  <ui:SendHotkey.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="abd3407f52c11eb2e278c887fbe87187" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
-                  </ui:SendHotkey.Target>
-                </ui:SendHotkey>
-              </Sequence>
-            </ActivityAction>
-          </ui:WindowScope.Body>
-        </ui:WindowScope>
-      </Sequence>
-      <FlowStep.Next>
-        <x:Reference>__ReferenceID1</x:Reference>
-      </FlowStep.Next>
-    </FlowStep>
-    <FlowStep x:Name="__ReferenceID3">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">120,334.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,66</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">220,400.5 220,414.5</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">230,333 230,377</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <Sequence DisplayName="openExcelFrwd" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_16">
@@ -348,101 +164,89 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'MiguelRod Tv_cclien'" sap:VirtualizedContainerService.HintSize="490,1903" sap2010:WorkflowViewState.IdRef="WindowScope_6" InformativeScreenshot="1253c0dfac17f90b4ed77e59fdc7d88d" Selector="&lt;wnd app='teamviewer.exe' cls='TV_CClientWindowClass' title='Pedro Lolic - TeamViewer' /&gt;">
+        <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'MiguelRod Tv_cclien'" sap:VirtualizedContainerService.HintSize="434,1208" sap2010:WorkflowViewState.IdRef="WindowScope_6" InformativeScreenshot="1253c0dfac17f90b4ed77e59fdc7d88d" Selector="&lt;wnd app='bplus.wtk2.exe' cls='wdm-DesktopWindow' title='1-BLOOMBERG' /&gt;">
           <ui:WindowScope.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="456,1757" sap2010:WorkflowViewState.IdRef="Sequence_15">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,1062" sap2010:WorkflowViewState.IdRef="Sequence_15">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="414,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_6" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
                   <ui:Click.CursorPosition>
                     <ui:CursorPosition OffsetX="42" OffsetY="41" Position="TopLeft" />
                   </ui:Click.CursorPosition>
                   <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="46bd963067efc59156e58fd8c7249e20" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="46bd963067efc59156e58fd8c7249e20" Selector="&lt;wnd cls='BLPUserWClass' idx='2' /&gt;" WaitForReady="INTERACTIVE" />
                   </ui:Click.Target>
                 </ui:Click>
-                <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'TV_REMOTEDESKTOP_CLASS'" EmptyField="False" sap:VirtualizedContainerService.HintSize="414,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="False" SimulateType="False" Text="mars[k(enter)]">
+                <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'TV_REMOTEDESKTOP_CLASS'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_4" SendWindowMessages="False" SimulateType="False" Text="mars[k(enter)]">
                   <ui:TypeInto.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7ef511ecd23fbac224962016c5e148b0" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="7ef511ecd23fbac224962016c5e148b0" Selector="&lt;wnd cls='BLPUserWClass' idx='2' /&gt;" WaitForReady="INTERACTIVE" />
                   </ui:TypeInto.Target>
                 </ui:TypeInto>
-                <ui:Click ClickType="CLICK_SINGLE" DelayBefore="1000" DelayMS="1000" DisplayName="Click 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="414,106" sap2010:WorkflowViewState.IdRef="Click_7" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-                  <ui:Click.CursorPosition>
-                    <ui:CursorPosition OffsetX="348" OffsetY="97" Position="TopLeft" />
-                  </ui:Click.CursorPosition>
-                  <ui:Click.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="5d1215bebc0ad698d3a1733a738a5a98" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
-                  </ui:Click.Target>
-                </ui:Click>
-                <ui:ClickImage ContinueOnError="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="1000" DisplayName="Click Image 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="414,106" sap2010:WorkflowViewState.IdRef="ClickImage_5" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
-                  <ui:ClickImage.CursorPosition>
-                    <ui:CursorPosition OffsetX="-23" OffsetY="0" Position="Center" />
-                  </ui:ClickImage.CursorPosition>
-                  <ui:ClickImage.Image>
-                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABcAAAASCAYAAACw50UTAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAGDSURBVDhPzZTNSgJRFMevOjMVKBFtsiihYT4cE+eDmTHog4hm0Uy48Bl6DDUIBBHd+hrNql6gNm16Ct2IC1/g39wZjdACZ5Bo8YPLuZffOZzDueT+Ooerky0QhqCgFLAviQFCYg4VGentHAghIHgR8fF4ACZN4N2cwvXu4LpuYmq1GiRJmsl9Hq8PebBB5WeWBFXToWlaYgzDgCAIM/nTTJ4hOLdl6IYZPkiKaZr/QF6pVFAsFpdQFOWrBYusJKfier2ObreLZrOJRqMR0mq10G634TjOjwlWkuu6jnK5DN/3MZlMMBwOMRqNwnO/30epVFoSU1Zui6qqYZLBYIDpdIrxeIxerxe2hca/S+fEGihNIIpiWG2n0wHP87+KKbHkFCqbD3PxbpHY8jj8oTxY/zcqD9b/Yu3yZwHv9OMKKr+sKjAtG5ZlJca2bciyHMmdY4LqHsHRLoP8ThYZhgXLJofjODAME8lZlmCDI8huppBJBQEaXBe3roeI6D/2PG9NePgEVIGjsKwFuLoAAAAASUVORK5CYII=" />
-                  </ui:ClickImage.Image>
-                  <ui:ClickImage.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
-                  </ui:ClickImage.Target>
-                  <sap:WorkflowViewStateService.ViewState>
-                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                    </scg:Dictionary>
-                  </sap:WorkflowViewStateService.ViewState>
-                </ui:ClickImage>
-                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="414,106" sap2010:WorkflowViewState.IdRef="ClickImage_6" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
+                <ui:ClickImage ContinueOnError="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="5000" DisplayName="Click Image 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="ClickImage_7" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
                   <ui:ClickImage.CursorPosition>
                     <ui:CursorPosition OffsetX="46" OffsetY="1" Position="Center" />
                   </ui:ClickImage.CursorPosition>
                   <ui:ClickImage.Image>
-                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
+                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAALoAAAAdCAYAAAAdF3anAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAVqSURBVHhe7ZoxayNHFMf9DfIFwnXXBFwmhbkrjhBwcCBBhQMGF4JAMG6EK7uyU6k6FQfeg3C6RmwwjgoLFOygQoUOFSJSoUhgIVSsULEGFQsutlDxz4w0Ws2sZqXd9a4ulubBDyztzGg885+Z997O1rvXu9B/+FmhWGu23n/3Ez6+/l6hWGu2Mt+8QfqLFwrFWqOErtgIlNA9aHYgmF25kJZTPA8iF7qWbTFpcGbc4UpS9v+MEvp6EbHQ99E2mDJgY2SzP8nfg3NZ+fgRBGtVUZKUkaGEvl5EK/TTKpE0M6OAUumBfSDWzEGT1YmZsEJXrBcRCn0HjSYTFDEzu4P0XgEW+ww8oHckqxcvSugKSnRCT9zNRG2WURx/L4p/VEvP14sZJXQFJTKhl2uO0wIrvz97dl7HiH0PdNHcE+stIptIo1GqY2hanL8/s5Ft4bHTglHMoZzYdeqVKrNzxJc5C+AChkdVPz569ugS7UoXjxaJT1g9x2zyndWHWSmgejTrqxTeBUQfbTJm2t4FmpUWLNq2eyzG41BF83Tfh3u4A/00h16N9VM6rjZso0v6eocGaVPezvMiGqFv52CyQQJaaGzzzw/RcQJU4LF0wj2ToyU/wDAkM7DQLBink/qrFrqWKsA0g/V3ZFRRS8jbE4VOylr+/x+bxEJeGS7az2HAoVmXIDwSoRe5oFPmnggpR7uOqrAQRK5IWVEyFoZ0F0wdIsuXfXWImyTZ8YtVMnm0xkzoPOFdF1H0XhM+11+7j0H+ErcH/O66iyvS1ybZ7cWyXbSTJJbh2hvjEjo122yhp7va3d5HPnWJnmtTEE7UKe7FY9TRzpwhv8f/Pu3nMcrZAtnx++PySugOaQycEfQKOPkyHhNBmZuMO9y+kpQLQKxC5+MSYqNOATcLFvGYxAcM+EqyPrnGYai7ns9xKYwvOtdzZYRTzm6h5nq+St5++RXKv3/Epz+uffPnrylpW355stB1vctGj5hRgC4pQ+F3/VmwysPn4Ikt2fn9EqfQ+bhk3mXzRsvwcQvLUPFlAgt9+f95U+TGn7RuFc/EE3LFvP/6Df79p477+/ul/P32nbSNIDxR6CfoOc65DVOTHMNThFSjrOw1huwptaiOzPiEfib685Jd1BtxB55rOwahp7cvyFzxrVKjAfIDhp06evkCGufHuOGC+rjxI/YoRE55mtCFjEpAm9v9RaH7mVw/xCd0fz68HLHu3CKJQ+hjdlHM3GFAfnzZvNEM0SAf/66/SOxRiZzyBKG7XI3A5g4e1Y7uEJvQXdBgNnmGql5Ap9LCULYAiJvpf8zCIRN7lCKnhBf6URmPbCz8+6e8q0NMuBbgWjh0stbUR3efhKvw0f2zi9tinzU0sahO10XwYo9a5JSQQn+JWnM2FUHeeOp5fhAnL0OmzzTXBPvKYiwhTqGLi/1zZl2iFDphT8wmrULoFCr2v36L5+15OKG//JEbiKB3WMRUo3uRXOld8fi0H2CWcignF+TRx0GWjzw6KWNmT6A7YpzktxsZ2Ussfz74fH+D5NH76KQkAXzkQmduoW3BalbRofn45DGuhNTtDvQDmkMviy+VrGiyX5+bUELXvj1ko0BsQUrRCyHVKDnysyHe4HkJXdNaSwMvuX/tT+iUMP0dGWWUvd4RxCX0gLbw7e0zI5TQ9YNf2FBI/Es/CKlG72sBk7sjHvc7iBToXReLpsbIDlUU3vC52iFCHGcaXG2M73SYXZh5mYj9C30C2RFJfzvTOySsnmPstwbkdCot6OuYyIVOsy3Xs4CT3rthRXmbjsegdL38Ps4zI3wwqlA8I5TQFRuBErpiI1BCV2wESuiKjUAJXbEBvMB/coeK/QlF3BIAAAAASUVORK5CYII=" />
                   </ui:ClickImage.Image>
                   <ui:ClickImage.Target>
                     <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
                   </ui:ClickImage.Target>
                 </ui:ClickImage>
-                <ui:ClickImage ContinueOnError="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="5000" DisplayName="Click Image 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="414,106" sap2010:WorkflowViewState.IdRef="ClickImage_7" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
-                  <ui:ClickImage.CursorPosition>
-                    <ui:CursorPosition OffsetX="46" OffsetY="1" Position="Center" />
-                  </ui:ClickImage.CursorPosition>
-                  <ui:ClickImage.Image>
-                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAAHQAAAARCAYAAAAMo4jOAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAl7SURBVFhH7Vh5UJXXFf+QXcNaSVwSU02iNMlMm1GbWJulmdQ0sdFWTf9oHG2rdqZNGttYd4UHbwFFcAkqVrHWBeqKPECDVRGIKBq3CEHRx/IeiAqIyq6SX8+593u+9+AT0E6TaYc785v3vXvPPffc8zvn3Pt9ilF5DN2DLwz30Vtj/L8LveKJhYqCBQT+1ZLpwWNQopUgdIUoIRxIzwH0zPCn/wEd5B4VJqUPIhUPRBBpWnqNFEDrvv9TVBaU43pBMW5krsBixb2DXA+CukOoP8IoKy/AuTUiibJEryn/cGAyE55/HQf/shiH583CBs++HUg1Kj7Y9JMP1LW55YhMdZbpgUSXhEaR48Je0Us/Nn2BgoKvxWPRvPFEqBeNa8/rLvSUaSl/jBI6uR0MGkDZ6u8iw1Uhxrs/1g17GeuGjsT6IaFEsp+LTA8kuiDUj7JzEPIPVAhnW/80GhumpIpnVKVjZW9fzRIpS7IXwikYFmkgnEjkeSaSmUf/t078ROpEE8xKL8x2kjVQuY+gXz435zuh45p+FBy9qBS7rsUII+ipErgGXyD1yfHFipso+VpzdYo32cnHjfPcALE/nYY8g/UYvqWA65RQdnjsS5Nxi33dcBZJIb5YGDIWVTeE93Fp6nDaQO92c7xpM32xdtRkfHnoDBpqGnC3uZnQgjuNDWi1WHBxtRFr/P0Q/+5M1LcCbXfuSoXU7jU24k4Ty3PfVSRTQOUkFtHzHTTXVKOh+hbunNlE67rdX9NAdkZ59MeW3y9DdUklWhsaxXp3m2i9+hrYUhKx7QcvEgm9CEwOk+mJlG0luNdUj5rkKOx4Zyaqrddxt4XnNaL15k20WC/j3B/eRyztkauEXI/Pez8kDJ+GU3uPkyzZKuxtQuvterRcs+F6biqShod+K6R2SihnxoEtTcLRVZvn0qYU6vPC7s1nRR8q9mA59RlVeRNFuTHoh7hwtlqOU2u1nsTx+XpkL9Tj1I7DqL3WKAd2vg1DyGgcWrQEX5mzZB/acNkUgyOLTcjVLcXxOB3WKiHY9svZyFmwBlWXm6VYtfn+GWqk3xWjZ6BGHWIdtpTdyJuvw9GonaitkvZzK4ubhBg6j01ETiQFRPoBiiandrPwJM5ELkWWfi0unbOpvVQ3ts6lAPAWVUDn/l2krTuhjgA1OenIM0XjyPxVKEw7iFoR/cCZWWMpg31d/Nk1ZKBxZdMCVwQjBZT2XIkHEhpFihcpEyBPTOCzUFYYSP0eMLhNU/u/xon3hhHJXM76QO/7PE4XqjOaC7Hj2b7kPH/hPB0hgspntHsIYgMGI9ZH3l65PCX/ep6cg2ZkuPURZEVQWY7gAKH5Bpo7TxmAE7tl6UdVipCJInJ0/X6O6jrZ3Zq9Feu9fUjel+ayvUyeN/4+Nwn3pAiKp4wh5/gIm9L2qcFVuwWJg/vQWrJs62jtMKU/suIK5TisFAj8uuaNFSMmokHtvfLbCeLI4COAjwReL9qjH+L8BiHGI5jsa1+qOwOT6Yd94SZctpSguLAQF8+fv4/ioiJYSkqQOHJMp6Q+gFCOYD9sjz4sLb8UJ841Npwd+VdC1h7pjOYMI5aSA9jp8UNWiz4qnDjx/igiy1Nkg7NePl9NpNt+LvGlaNe0cHVeKzL9+9HarpeiaAoEnTIUp8xXpJhKqIH0J/9uo+wjN29/oi+RxeXR7kgOQF8iZzBOH1BZr9kk5roQWpOI1cGsz25rII0rSP1kmRwnu8ykN5IzLuBHuGhVu1GJs7Gr8LlBh73vTkLiwMcxh+YxuY9WbgNEQKXPNsJWV4tSmxUl5WUoq6yArfo6ksdNERmsPVdCk1B2gj74TZReVe3utN1FZugAcfFYPSRNdt27gJ2j3MkBzmRq4z8hlB2c9uEXsu/eV1geECIy2nUulUkiNG9jiZRDkQhM1wzdiLUhjqODIcZnfyrHqXKkEKF62g+/ZoWTvtz4/bj6ZTFu16g6nFrdwQQk9PoOyba3pWvwWc3VJWXGHFivXRekllVW4h+vjiObPEim86zXJNRACtfPkOS02U4jZ8p0ZEybif3T7fgIqZMMqKqShazB/GcRlZ8+s0T851KcP/lV9YuOHxkp9crs7EP6uSxKsl0JbcH+3iG0IXYEO88e5Q/O0C1T42UfzTUPDKJjwovm2QOJdXgSgYNxMqteilWt6ZihD0FolPh1F0cF69G5DcHfhr+Ff46fCvPUpbih3u/a8iPpMuVB6zt0dhdMaiStkTZLj8r620ga+wGt2TWZDA1CA8hYb6hc4eKC18Q5EUmOccBDZGTix4ekUNs1mJ/0IGc+jtz9lbKPSmDOO6Oxsu9TIuLYAXq3AYh/egQ2vzEBm595UpDKztkzQ6fOaUPu0GdJD18CghE/8Hticw8iNJqcu8j/FVjKVC9eOQXzSy9gWa8gcYkIJwesCBmG/VtOynE6CvJfH066uHw+PKERVBFi/V9D0lvjsPnFEVgV/JQIfraFX30MPs/heMZNOaU0Bss93R+JUAbvWwa+D9nFl6vunccdCOXPfBH+z0mjqCWTsXoNZVyWTcoIqOaj3DRdbC7S+2nkH7ut9tLLRp0NpXszULx3H2znLGhpUwfM7xFx/B7rgfiJYWontRt0ZqSbYTl4gfx4gdaQFy6dEoqzmer7Ul2GSijfrN0QE/ozlDmWxK2C87CkpMOSeQ4t9tsQtfwpP8YSWlNmAN1yD6nGNG1FwhMdCc1YkCDHqaUSoRwkSeOvqT007WoFKrJ4b5koyz6N2w32K2Qdjrw5iPQ5qtOjge8A3SPSjg6Ecplb2f8F2HJPw7L8VxR5dHNrJyPBTgnAzo92wZp7FNUZ6xDnE0zze5PzKTsCX8aJDbthPfI5jeeRvjxYc47CuisJn014mzbLRElj+QV/+ZgFsPwrB6WHsknuGGw5uShbbyQ5vuT40VqDkRm+ncZI17ZIqhBcgqQt/L7M76UJI6ejYM8+WLPlmmyXNTMd+R/+huT4Fmr/SBBIweeFZH06KrLzULpjDlYF8gXOsT8xPuljlGcdQ8XJDGylQNdTMMQFv4EDutUoyshF+eEcWkvdG6E8dQeOTfuF2I+8+Tv0fVPQPEOZVC6p4eQArXEHuGTKLzFhVDqdo4nPGiZWjrkikoKkfeRxpnIGOMuFU59Djl9/7GMOMh2QX2/a62DoqN/1ts1gUuV4OB0jWqWRSbXrMKh28L44e7XWYURo7O2bhCahPfjfhbKMorAH/y/wwr8But9oJhfxFWEAAAAASUVORK5CYII=" />
-                  </ui:ClickImage.Image>
-                  <ui:ClickImage.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
-                  </ui:ClickImage.Target>
-                </ui:ClickImage>
-                <ui:ClickImage ContinueOnError="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DelayBefore="5000" DisplayName="Click Image 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="414,106" sap2010:WorkflowViewState.IdRef="ClickImage_8" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
-                  <ui:ClickImage.CursorPosition>
-                    <ui:CursorPosition OffsetX="137" OffsetY="2" Position="Center" />
-                  </ui:ClickImage.CursorPosition>
-                  <ui:ClickImage.Image>
-                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
-                  </ui:ClickImage.Image>
-                  <ui:ClickImage.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
-                  </ui:ClickImage.Target>
-                </ui:ClickImage>
-                <ui:ClickImage ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click Image 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="414,106" sap2010:WorkflowViewState.IdRef="ClickImage_9" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False">
-                  <ui:ClickImage.CursorPosition>
-                    <ui:CursorPosition OffsetX="0" OffsetY="0" Position="Center" />
-                  </ui:ClickImage.CursorPosition>
-                  <ui:ClickImage.Image>
-                    <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="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" />
-                  </ui:ClickImage.Image>
-                  <ui:ClickImage.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
-                  </ui:ClickImage.Target>
-                </ui:ClickImage>
-                <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="414,22" sap2010:WorkflowViewState.IdRef="Delay_1">
+                <ui:ClickOCRText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click OCR Text 'pane'" sap:VirtualizedContainerService.HintSize="334,201" sap2010:WorkflowViewState.IdRef="ClickOCRText_1" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" SendWindowMessages="False" Text="Export">
+                  <ui:ClickOCRText.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickOCRText.CursorPosition>
+                  <ui:ClickOCRText.OCREngine>
+                    <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                      <ActivityFunc.Argument>
+                        <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                      </ActivityFunc.Argument>
+                      <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" AllowedCharacters="" ComputeSkewAngle="False" DeniedCharacters="" DisplayName="Tesseract OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_1" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="2" />
+                    </ActivityFunc>
+                  </ui:ClickOCRText.OCREngine>
+                  <ui:ClickOCRText.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="35e15bcc8b963067db98cb9fb0957cad" Selector="&lt;wnd cls='Chrome_WidgetWin_0' /&gt;&lt;ctrl idx='3' role='pane' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:ClickOCRText.Target>
+                </ui:ClickOCRText>
+                <ui:ClickOCRText ContinueOnError="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click OCR Text 'pane'" sap:VirtualizedContainerService.HintSize="334,201" sap2010:WorkflowViewState.IdRef="ClickOCRText_2" KeyModifiers="None" MouseButton="BTN_LEFT" Occurrence="1" SendWindowMessages="False" Text="Current Tab">
+                  <ui:ClickOCRText.CursorPosition>
+                    <ui:CursorPosition Position="Center">
+                      <ui:CursorPosition.OffsetX>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetX>
+                      <ui:CursorPosition.OffsetY>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:CursorPosition.OffsetY>
+                    </ui:CursorPosition>
+                  </ui:ClickOCRText.CursorPosition>
+                  <ui:ClickOCRText.OCREngine>
+                    <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
+                      <ActivityFunc.Argument>
+                        <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
+                      </ActivityFunc.Argument>
+                      <ui:GoogleOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" AllowedCharacters="" ComputeSkewAngle="False" DeniedCharacters="" DisplayName="Tesseract OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="GoogleOCR_2" Image="[Image]" Invert="False" Language="eng" Profile="Screen" Scale="2" />
+                    </ActivityFunc>
+                  </ui:ClickOCRText.OCREngine>
+                  <ui:ClickOCRText.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="35e15bcc8b963067db98cb9fb0957cad" Selector="&lt;wnd cls='Chrome_WidgetWin_0' /&gt;&lt;ctrl idx='3' role='pane' /&gt;" WaitForReady="INTERACTIVE" />
+                  </ui:ClickOCRText.Target>
+                </ui:ClickOCRText>
+                <Delay mva:VisualBasic.Settings="{x:Null}" DisplayName="Delay 3 seconds" Duration="00:00:03" sap:VirtualizedContainerService.HintSize="334,22" sap2010:WorkflowViewState.IdRef="Delay_1">
                   <TextExpression.Namespaces>
                     <sco:Collection x:TypeArguments="x:String">
                       <x:String>System.Activities</x:String>
@@ -488,555 +292,24 @@
                     </sap2010:ViewStateManager>
                   </sap2010:WorkflowViewState.ViewStateManager>
                 </Delay>
-                <p:CVScope ApiKey="{x:Null}" ContinueOnError="{x:Null}" DelayBefore="300" DisplayName="CV Screen Scope" sap:VirtualizedContainerService.HintSize="414,407" sap2010:WorkflowViewState.IdRef="CVScope_1" Server="https://cv.uipath.com">
-                  <p:CVScope.Body>
-                    <ActivityAction x:TypeArguments="x:Object">
-                      <ActivityAction.Argument>
-                        <DelegateInArgument x:TypeArguments="x:Object" Name="CVSessionData" />
-                      </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap2010:WorkflowViewState.IdRef="Sequence_25">
-                        <p:CVClick DelayBefore="{x:Null}" DelayMS="{x:Null}" InRegion="{x:Null}" OutRegion="{x:Null}" ClickType="CLICK_SINGLE" DesignTimeRectangle="235, 706, 23, 21" DesignTimeScaleFactor="1" DisplayName="CV Click - Icon" sap:VirtualizedContainerService.HintSize="400,129" sap2010:WorkflowViewState.IdRef="CVClick_1" InformativeScreenshot="c0f0b89d5615cdd55d7ce5de63818f83" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False" TargetType="Icon" TimeoutMS="30000">
-                          <p:CVClick.CursorPosition>
-                            <ui:CursorPosition Position="Center">
-                              <ui:CursorPosition.OffsetX>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetX>
-                              <ui:CursorPosition.OffsetY>
-                                <InArgument x:TypeArguments="x:Int32" />
-                              </ui:CursorPosition.OffsetY>
-                            </ui:CursorPosition>
-                          </p:CVClick.CursorPosition>
-                          <p:CVClick.Image>
-                            <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAABcAAAAVCAYAAACt4nWrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAWGSURBVEhLhZV7TNNXFMeb/bH9s/+W7c9lS5bMJcYsm8nmzGJ0m48JqHNuupgRN4cOX+h8bepUnAqC7zmG1gcgbxCh1NIWWoQx6YtSkUeBVpi8CrQUWqDl9dntD+YyXbaTfNrk3HO+595zb85PNuCBfoHXK/7dUNimZV/510SrP2ajJpyox0SwSbNcEMYmtaAkjKgQ6gjCC2ajaajH6hzC7PA8RtYlhNuFcF2Pl92/rSfLmYAnIBz/YhOCyScIWXrTWQps1ULc909x5wA0uvzE6FfgHulmKDCCs91Ji6OFFqf9H9ifxGGno6OLG43xFN43YHvow+j0YGj1YGwW4kKXo8YYHP57tLY5UJnUqC2CGjWaGi1aQam1VEJn0wn0EnpbuUCP2W4l1Z5Axj0DVXU+NHUekSswCvGKZhNxtdtwuVwUVKTR0ddMMDDG2PA4PX4X3b5uGjsaaeq0U11fibFBS/UDUdx2B4WhEF2lmmzHeVKrqimrGURlcKM1edCahfi5ygSsPXdRVBch18jx+N10+ZzU9ZqYDARnuvofNjnJ6JSXwdEAQyMTPOoLUmIcmBY/Uh5Lk9vKqazDXLkVL8V7R9pZGfc8szbK+DFrg+TLs1xmX340W7M285PyO4ZH/RwtOiwu8jbF9Urud1qkuJGREW6q6sQpvMhi7/5EfZ+JvanrOVd4WAoIWYntKm/veIZZm2QcTPuS/XmfsFq+iD0ZkYxO+KSYxSfnseT8MpacW8aqpIXCE6C5y0Vy7u/orEMz4r1GIuMjyKpMlpL+ss3JS5gTJePlNTLWXluC1pY3swKu0Yd8cWk5nyavYdHZd4mIWyD56+oecb3ogdR/WWxFaOcGsTibqgalFBAyTUMaRwvXsWDXc7wUJmNu1KszK3+b199Ln68XZ18rtQ6b5DOZTWSqZ8T3647zoNfAvAMv4hlyMBzs5KQmmn2KlRzM2Mg3l8N4YZUM2XsyFh56h3j1MSExRUWzgsjU1exR7CBecUBspkQSVxlMZKmbpnv+g+oEtp4q3tz1LKPBR0xM9tLptVLbVcrthhQyjRcIj5uHbKEo8JqMzPKLksiVe4l8eGYpEZcWsPTUXPZk7Zb8+boasjVt6EI736uKxdKtJzz+FSam3LR5zLiG74tLc4nQYSkhZFOTgxRXpWCom97hudITfJuyns+Tw5h/+A3Oaw9Jfnl+Pjl6B8WWbmQ7VAcxdZSyLSV0IR4SS6OJK/uGM/qtXNIdY2CijyT9ERTWZKwOPS1uo4gbwS9O6RNPdsDfhsvbhHu8W/JfL1CQU+Uk29I6LW7s1JJUFsNA0Mme2yuJVUVyVB3JmTvb6RtzEJ26mC3py1mbsYzwxPlCZJwt4r1vuLKCvbeiOJDxPU29duEPcCGlmNyqdnIsDmTb7xzA1luJpvE6Pv8fFNUnkVuTwGnlBpRNqdi7TexMF+M3PYJ1V5cSkxlJYLyH9dfCRL/fZ4Xo+ez9cyh7oBXiQX5OV5JrFeJmIb5FuY+e4VaCU2L2PmX9BMe6aXGVi0l3h5xaOYW1qbgHW4iWr+Oji3P54MxbvLrzdR7214gDeTh7o5C82hnxY7okPit6nzUZC1l67B1ibn7FeWUsClMKLf3top/tjI/1i0KDgtCsCQjEKCU08/vFy3KKSZjJ2EQPo8M9nC0oJ8/aNi1+y9JJkbWfIoub3LudpJS18muxiV+yqzktL+P4pdskpt3i2s0cMjVa8vUVYuRWY2+2EQx2iAKjgtBnIyBN1IT80r/FQz9/kVvjlAgt5tXMYGkjy+wkU6xnahq5UmDmYp6O+LRiEq8VEScvIEGeQ55SRUZBCZdzjCL/4dPi/0uouEgMFc8Xfc03/0FGdQs39fVcLqslWVklJmKjtMEcs4M/AbpkDkShxdnCAAAAAElFTkSuQmCC" />
-                          </p:CVClick.Image>
-                          <p:CVClick.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
-                          </p:CVClick.Target>
-                        </p:CVClick>
-                      </Sequence>
-                    </ActivityAction>
-                  </p:CVScope.Body>
-                  <p:CVScope.DesignTimeCache>
-                    <uc:CVCache ScreenshotGuid="{x:Null}" InformativeScreenshot="dfc5007391cf8bdf9fbedbf418492555" LogicalPosition="0, 0" OcrText="Mgue] Rodriguez X&#xA;'SWAP 2.16 07/31, Acciones Comunicar&#xA;USD 06 03 19&#xA;Scenario Multi-asset , Archivos y edras Actualización remota&#xA;Views&#xA;Positions&#xA;-workshect Actions Settings Multi Asset Risk System&#xA;Scenario Chart&#xA;Vista con contra arte Scenario Table&#xA;Group by 20: 38&#xA;Inttial Margin&#xA;&lt; Acicl Tlckcr&gt; Add Derivatives Add Strateav&#xA;Receive&#xA;.•swnp a.os 09,'&#xA;.'sww 1.89 09,'&#xA;-'SWAP 1.89 09,' SO.OOO.OOO.OO BBVA 31_RLET 3Y&#xA;SWAP CHILE&#xA;20.000.000.00 Mizumo&#xA;25.000.000.00 usa 2Smm&#xA;ZS.OOO.OOO_OO USD 2SMM&#xA;45.000.000,00 1 Tau BULLET&#xA;SEGUNDO&#xA;usace•&#xA;usocep&#xA;DCL p -&#xA;usacl_p - a 707.141&#xA;a 590.27i&#xA;648.881&#xA;649.341&#xA;d 650.201&#xA;z 668.co: 02' 2gf'&#xA;05/29'20&#xA;03'31.'20&#xA;08'31.'20&#xA;07/31'19&#xA;08'30/19&#xA;10'30,' 19&#xA;07'31 f 19&#xA;12&#xA;7&#xA;3&#xA;3&#xA;3 2S.OOO.OOO.OO USO 25MM&#xA;25.000.000.00 OSO 25MM&#xA;-500.000_00 SCOIIA&#xA;-SOO.OOO.OO&#xA;- 1. aso.ooo_oo 2&#xA;-SOO.OOO.OO SCOTIAaANK&#xA;-650.000,00 59'64&#xA;-SSO.OOO.OO&#xA;-SSO:OOO.OO 59'54&#xA;-SOO.OOO.OO&#xA;-SOO.OOO_OO BCT&#xA;9D ion'; Mktval&#xA;so.671.651&#xA;-2S.2C9.css&#xA;47.722&#xA;1.181&#xA;-sg.02&#xA;-58,83&#xA;Fx/BEMF/Trade 20257014 Notification-sell&#xA;1004&#xA;1003&#xA;1002&#xA;1001&#xA;1000 6/03&#xA;6/03&#xA;6/03&#xA;6/03&#xA;6/03 : 12&#xA;: 09&#xA;: 26&#xA;: 25&#xA;: 23 B 1 oomber-g&#xA;Today' s News/B100mberg My News Categories Summary&#xA;Mars Report/Your MARS positions Report is Ready&#xA;Mars Report/Your MARS positions Report is Ready&#xA;Mars Report/Your MARS positions Report is Ready&#xA;SuggesLed Functions USSW Track sura p ra Les &amp; related benchcnar-lcs IR DL Access a II Of your s a ved I R S" Position="0, 0" ScaleFactor="1" ServerVersion="0">
-                      <uc:CVCache.CvUiElements>
-                        <scg:List x:TypeArguments="uc:CvElementInfo" Capacity="256">
-                          <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="908, 140, 155, 18" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="840, 29, 24, 25" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="421, 29, 23, 25" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="586, 29, 28, 26" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="1292, 28, 15, 15" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="519, 30, 26, 25" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="697, 28, 28, 27" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1140, 27, 20, 17" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="992, 29, 26, 25" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="1251, 28, 16, 16" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="1206, 28, 16, 15" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1030, 30, 23, 23" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1197, 613, 16, 16" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="396, 141, 19, 17" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="347, 27, 30, 29" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="1201, 142, 16, 15" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="1161, 28, 15, 17" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1230, 27, 19, 18" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="162, 1, 16, 16" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1220, 613, 16, 16" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="676, 31, 18, 20" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="497, 32, 18, 19" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="397, 107, 18, 16" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="566, 33, 16, 19" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1184, 27, 22, 15" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="97, 26, 19, 18" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1233, 711, 15, 15" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1242, 613, 16, 16" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1176, 614, 14, 15" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1275, 28, 16, 17" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="734, 142, 18, 16" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1154, 615, 15, 12" Score="1" />
-                          <uc:CvElementInfo Category="MinimizeButton" Confidence="DesignTime" Region="1242, 3, 17, 14" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="180, 124, 171, 18" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="817, 32, 18, 19" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="704, 107, 34, 18" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1216, 711, 15, 15" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="1060, 139, 156, 21" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="670, 107, 21, 17" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1292, 662, 13, 13" Score="1" />
-                          <uc:CvElementInfo Category="CloseButton" Confidence="DesignTime" Region="1334, 1, 16, 16" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="458, 107, 20, 16" Score="1" />
-                          <uc:CvElementInfo Category="CloseButton" Confidence="DesignTime" Region="1287, 581, 16, 16" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1, 0, 20, 19" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1264, 613, 15, 15" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="139, 88, 16, 17" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1201, 711, 14, 14" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1168, 710, 14, 14" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="1148, 639, 12, 13" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="109, 707, 27, 19" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="1026, 60, 20, 17" Score="1" />
-                          <uc:CvElementInfo Category="CloseButton" Confidence="DesignTime" Region="314, 28, 25, 26" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1292, 640, 14, 13" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="63, 27, 18, 16" Score="1" />
-                          <uc:CvElementInfo Category="MaximizeButton" Confidence="DesignTime" Region="1288, 2, 17, 17" Score="1" />
-                          <uc:CvElementInfo Category="CloseButton" Confidence="DesignTime" Region="132, 2, 13, 14" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="59, 707, 27, 21" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1154, 708, 13, 16" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="228, 705, 35, 23" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="235, 706, 23, 21" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="263, 88, 17, 17" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="1152, 574, 27, 27" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="191, 706, 24, 21" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="315, 28, 25, 25" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="150, 706, 25, 21" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1151, 662, 15, 15" Score="1" />
-                          <uc:CvElementInfo Category="CheckBox" Confidence="DesignTime" Region="1153, 663, 12, 13" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="DesignTime" Region="495, 107, 49, 17" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="63, 348, 11, 11" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="DesignTime" Region="1151, 574, 28, 27" Score="1" />
-                          <uc:CvElementInfo Category="CloseButton" Confidence="DesignTime" Region="1134, 640, 11, 14" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="63, 269, 11, 12" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="1279, 664, 11, 11" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="397, 89, 17, 15" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1133, 639, 12, 14" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="63, 322, 12, 10" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="63, 243, 11, 11" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="672, 108, 17, 15" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="1133, 639, 12, 15" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="187, 704, 32, 24" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="DesignTime" Region="63, 27, 18, 16" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1288, 1, 16, 17" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="709, 108, 24, 15" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1182, 143, 15, 14" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="548, 34, 18, 16" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="447, 124, 70, 17" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="132, 2, 13, 15" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1279, 664, 11, 11" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="422, 109, 29, 15" Score="1" />
-                          <uc:CvElementInfo Category="CheckBox" Confidence="DesignTime" Region="1280, 665, 10, 10" Score="1" />
-                          <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="519, 140, 231, 17" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1152, 662, 13, 14" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="549, 106, 122, 19" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="525, 108, 16, 15" Score="1" />
-                          <uc:CvElementInfo Category="RadioButton" Confidence="Runtime" Region="1280, 664, 11, 11" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="257, 561, 19, 16" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="755, 140, 150, 18" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1335, 1, 15, 16" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="554, 674, 17, 18" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="754, 108, 16, 14" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="63, 297, 12, 10" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="456, 106, 25, 18" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="875, 625, 13, 15" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1187, 713, 11, 11" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1289, 2, 15, 17" Score="1" />
-                          <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="1134, 637, 173, 23" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1026, 60, 19, 16" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="55, 47, 13, 19" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="147, 705, 31, 23" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="498, 107, 14, 16" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="740, 107, 35, 17" Score="1" />
-                          <uc:CvElementInfo Category="CheckBox" Confidence="Runtime" Region="1182, 143, 14, 14" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1148, 639, 11, 12" Score="1" />
-                          <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="422, 109, 30, 15" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="890, 603, 13, 15" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="858, 625, 15, 15" Score="1" />
-                          <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="66, 107, 348, 16" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="817, 33, 18, 18" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1187, 713, 11, 11" Score="1" />
-                          <uc:CvElementInfo Category="InputBox" Confidence="DesignTime" Region="1222, 140, 83, 17" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="62, 376, 12, 10" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="874, 603, 14, 15" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1280, 664, 10, 11" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="565, 33, 17, 18" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="347, 28, 30, 28" Score="1" />
-                          <uc:CvElementInfo Category="MinimizeButton" Confidence="Runtime" Region="1187, 712, 12, 11" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1264, 614, 15, 15" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="97, 26, 19, 17" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="61, 375, 14, 12" Score="1" />
-                          <uc:CvElementInfo Category="CheckBox" Confidence="Runtime" Region="63, 270, 10, 11" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1154, 580, 21, 16" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="484, 143, 12, 12" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="261, 582, 15, 17" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1, 0, 20, 19" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="63, 270, 11, 11" Score="1" />
-                          <uc:CvElementInfo Category="MaximizeButton" Confidence="Runtime" Region="1169, 710, 14, 13" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="512, 108, 13, 14" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="63, 349, 11, 11" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="289, 86, 128, 21" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1133, 638, 13, 16" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="676, 32, 18, 19" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1026, 60, 21, 17" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1292, 663, 14, 13" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="874, 645, 14, 16" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1031, 29, 23, 23" Score="1" />
-                          <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="910, 140, 154, 18" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1151, 662, 13, 14" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="263, 88, 17, 16" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="168, 644, 15, 15" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="105, 706, 36, 21" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="422, 108, 30, 16" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="314, 28, 26, 26" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1242, 613, 16, 16" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1289, 2, 15, 16" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="132, 2, 14, 15" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="890, 625, 14, 15" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1276, 110, 17, 16" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1275, 28, 17, 17" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1334, 1, 17, 17" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="586, 29, 28, 25" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="519, 29, 25, 25" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="62, 124, 113, 18" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1298, 561, 12, 10" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1275, 28, 17, 16" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="497, 33, 18, 18" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="132, 2, 13, 14" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="119, 643, 15, 15" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="859, 644, 15, 16" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="1212, 710, 12, 13" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="62, 26, 19, 17" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="140, 88, 16, 17" Score="1" />
-                          <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="128, 26, 187, 20" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="1168, 710, 14, 13" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="991, 29, 27, 25" Score="1" />
-                          <uc:CvElementInfo Category="Icon" Confidence="Runtime" Region="444, 144, 12, 12" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="697, 29, 28, 26" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1168, 710, 13, 12" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="165, 86, 120, 20" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1304, 534, 9, 10" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1233, 711, 14, 15" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="565, 33, 17, 18" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="63, 295, 12, 11" Score="1" />
-                          <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="1152, 662, 14, 15" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="97, 26, 19, 17" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="741, 107, 30, 17" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="62, 323, 12, 10" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1184, 711, 11, 10" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="733, 142, 19, 16" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1154, 614, 15, 13" Score="1" />
-                          <uc:CvElementInfo Category="Button" Confidence="Runtime" Region="817, 33, 17, 19" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1293, 640, 13, 13" Score="1" />
-                          <uc:CvElementInfo Category="MinimizeButton" Confidence="Runtime" Region="1289, 2, 15, 17" Score="1" />
-                          <uc:CvElementInfo Category="MaximizeButton" Confidence="Runtime" Region="1274, 27, 18, 17" Score="1" />
-                          <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="427, 141, 75, 16" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1155, 707, 12, 17" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1151, 574, 29, 28" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="1302, 164, 8, 9" Score="1" />
-                          <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="739, 107, 36, 17" Score="1" />
-                          <uc:CvElementInfo Category="ArrowButton" Confidence="Runtime" Region="63, 244, 12, 11" Score="1" />
-                          <uc:CvElementInfo Category="MaximizeButton" Confidence="Runtime" Region="1152, 662, 13, 14" Score="1" />
-                          <uc:CvElementInfo Category="MinimizeButton" Confidence="Runtime" Region="421, 108, 31, 16" Score="1" />
-                          <uc:CvElementInfo Category="MaximizeButton" Confidence="Runtime" Region="670, 107, 20, 16" Score="1" />
-                          <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="1288, 2, 15, 16" Score="1" />
-                          <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="56, 87, 106, 20" Score="1" />
-                          <uc:CvElementInfo Category="MaximizeButton" Confidence="Runtime" Region="704, 107, 32, 17" Score="1" />
-                          <uc:CvElementInfo Category="RadioButton" Confidence="Runtime" Region="1289, 2, 15, 16" Score="1" />
-                          <uc:CvElementInfo Category="MinimizeButton" Confidence="Runtime" Region="1279, 664, 12, 11" Score="1" />
-                          <uc:CvElementInfo Category="MinimizeButton" Confidence="Runtime" Region="565, 32, 17, 18" Score="1" />
-                          <uc:CvElementInfo Category="RadioButton" Confidence="Runtime" Region="1152, 662, 13, 14" Score="1" />
-                          <uc:CvElementInfo Category="MaximizeButton" Confidence="Runtime" Region="1280, 664, 10, 11" Score="1" />
-                          <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="671, 108, 19, 16" Score="1" />
-                          <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="457, 107, 23, 16" Score="1" />
-                          <uc:CvElementInfo Category="InputBox" Confidence="Runtime" Region="1143, 683, 169, 19" Score="1" />
-                          <uc:CvElementInfo Category="RadioButton" Confidence="Runtime" Region="1152, 573, 27, 26" Score="1" />
-                          <uc:CvElementInfo Category="RadioButton" Confidence="Runtime" Region="98, 27, 17, 17" Score="1" />
-                          <uc:CvElementInfo Category="RadioButton" Confidence="Runtime" Region="1265, 614, 15, 14" Score="1" />
-                          <uc:CvElementInfo Category="RadioButton" Confidence="Runtime" Region="1233, 711, 14, 14" Score="1" />
-                          <uc:CvElementInfo Category="RadioButton" Confidence="Runtime" Region="1292, 662, 13, 12" Score="1" />
-                        </scg:List>
-                      </uc:CVCache.CvUiElements>
-                      <uc:CVCache.OcrTexts>
-                        <scg:List x:TypeArguments="uc:OcrTextInfo" Capacity="256">
-                          <uc:OcrTextInfo Region="32, 4, 36, 12" Text="Mgue]" />
-                          <uc:OcrTextInfo Region="72, 4, 53, 12" Text="Rodriguez" />
-                          <uc:OcrTextInfo Region="135, 5, 8, 8" Text="X" />
-                          <uc:OcrTextInfo Region="141, 30, 56, 11" Text="'SWAP" />
-                          <uc:OcrTextInfo Region="206, 30, 37, 10" Text="2.16" />
-                          <uc:OcrTextInfo Region="252, 30, 56, 11" Text="07/31," />
-                          <uc:OcrTextInfo Region="448, 38, 48, 9" Text="Acciones" />
-                          <uc:OcrTextInfo Region="617, 38, 58, 9" Text="Comunicar" />
-                          <uc:OcrTextInfo Region="500, 111, 36, 10" Text="USD" />
-                          <uc:OcrTextInfo Region="560, 111, 22, 10" Text="06" />
-                          <uc:OcrTextInfo Region="595, 111, 22, 10" Text="03" />
-                          <uc:OcrTextInfo Region="632, 111, 20, 10" Text="19" />
-                          <uc:OcrTextInfo Region="535, 128, 74, 9" Text="Scenario" />
-                          <uc:OcrTextInfo Region="617, 128, 95, 9" Text="Multi-asset" />
-                          <uc:OcrTextInfo Region="720, 46, 2, 3" Text="," />
-                          <uc:OcrTextInfo Region="727, 38, 46, 9" Text="Archivos" />
-                          <uc:OcrTextInfo Region="776, 41, 6, 9" Text="y" />
-                          <uc:OcrTextInfo Region="786, 39, 29, 8" Text="edras" />
-                          <uc:OcrTextInfo Region="867, 38, 70, 9" Text="Actualización" />
-                          <uc:OcrTextInfo Region="942, 39, 36, 8" Text="remota" />
-                          <uc:OcrTextInfo Region="65, 89, 64, 13" Text="Views" />
-                          <uc:OcrTextInfo Region="73, 128, 77, 9" Text="Positions" />
-                          <uc:OcrTextInfo Region="56, 141, 91, 12" Text="-workshect" />
-                          <uc:OcrTextInfo Region="173, 89, 81, 13" Text="Actions" />
-                          <uc:OcrTextInfo Region="297, 89, 91, 15" Text="Settings" />
-                          <uc:OcrTextInfo Region="1018, 89, 51, 13" Text="Multi" />
-                          <uc:OcrTextInfo Region="1080, 90, 61, 12" Text="Asset" />
-                          <uc:OcrTextInfo Region="1152, 89, 47, 13" Text="Risk" />
-                          <uc:OcrTextInfo Region="1209, 90, 82, 14" Text="System" />
-                          <uc:OcrTextInfo Region="194, 128, 74, 9" Text="Scenario" />
-                          <uc:OcrTextInfo Region="275, 128, 46, 9" Text="Chart" />
-                          <uc:OcrTextInfo Region="174, 143, 41, 10" Text="Vista" />
-                          <uc:OcrTextInfo Region="223, 146, 29, 7" Text="con" />
-                          <uc:OcrTextInfo Region="260, 144, 53, 9" Text="contra" />
-                          <uc:OcrTextInfo Region="326, 144, 34, 9" Text="arte" />
-                          <uc:OcrTextInfo Region="364, 128, 73, 9" Text="Scenario" />
-                          <uc:OcrTextInfo Region="445, 128, 46, 9" Text="Table" />
-                          <uc:OcrTextInfo Region="444, 144, 49, 11" Text="Group" />
-                          <uc:OcrTextInfo Region="502, 143, 19, 12" Text="by" />
-                          <uc:OcrTextInfo Region="791, 111, 28, 10" Text="20:" />
-                          <uc:OcrTextInfo Region="823, 111, 22, 10" Text="38" />
-                          <uc:OcrTextInfo Region="756, 128, 52, 9" Text="Inttial" />
-                          <uc:OcrTextInfo Region="816, 128, 55, 11" Text="Margin" />
-                          <uc:OcrTextInfo Region="764, 145, 7, 8" Text="&lt;" />
-                          <uc:OcrTextInfo Region="773, 144, 30, 9" Text="Acicl" />
-                          <uc:OcrTextInfo Region="812, 144, 62, 9" Text="Tlckcr&gt;" />
-                          <uc:OcrTextInfo Region="914, 143, 30, 10" Text="Add" />
-                          <uc:OcrTextInfo Region="953, 143, 97, 10" Text="Derivatives" />
-                          <uc:OcrTextInfo Region="1074, 145, 32, 10" Text="Add" />
-                          <uc:OcrTextInfo Region="1115, 145, 78, 11" Text="Strateav" />
-                          <uc:OcrTextInfo Region="115, 211, 37, 6" Text="Receive" />
-                          <uc:OcrTextInfo Region="105, 324, 31, 6" Text=".•swnp" />
-                          <uc:OcrTextInfo Region="140, 324, 20, 6" Text="a.os" />
-                          <uc:OcrTextInfo Region="165, 324, 17, 6" Text="09,'" />
-                          <uc:OcrTextInfo Region="105, 350, 31, 6" Text=".'sww" />
-                          <uc:OcrTextInfo Region="141, 350, 20, 6" Text="1.89" />
-                          <uc:OcrTextInfo Region="165, 350, 17, 6" Text="09,'" />
-                          <uc:OcrTextInfo Region="105, 376, 31, 6" Text="-'SWAP" />
-                          <uc:OcrTextInfo Region="141, 376, 20, 6" Text="1.89" />
-                          <uc:OcrTextInfo Region="165, 376, 17, 7" Text="09,'" />
-                          <uc:OcrTextInfo Region="283, 211, 68, 7" Text="SO.OOO.OOO.OO" />
-                          <uc:OcrTextInfo Region="354, 211, 24, 6" Text="BBVA" />
-                          <uc:OcrTextInfo Region="382, 211, 34, 6" Text="31_RLET" />
-                          <uc:OcrTextInfo Region="420, 211, 12, 6" Text="3Y" />
-                          <uc:OcrTextInfo Region="354, 237, 24, 6" Text="SWAP" />
-                          <uc:OcrTextInfo Region="418, 237, 27, 6" Text="CHILE" />
-                          <uc:OcrTextInfo Region="283, 263, 68, 7" Text="20.000.000.00" />
-                          <uc:OcrTextInfo Region="354, 263, 36, 6" Text="Mizumo" />
-                          <uc:OcrTextInfo Region="283, 280, 68, 7" Text="25.000.000.00" />
-                          <uc:OcrTextInfo Region="374, 280, 18, 6" Text="usa" />
-                          <uc:OcrTextInfo Region="397, 280, 25, 6" Text="2Smm" />
-                          <uc:OcrTextInfo Region="283, 298, 68, 7" Text="ZS.OOO.OOO_OO" />
-                          <uc:OcrTextInfo Region="374, 298, 18, 6" Text="USD" />
-                          <uc:OcrTextInfo Region="397, 298, 25, 6" Text="2SMM" />
-                          <uc:OcrTextInfo Region="283, 324, 68, 7" Text="45.000.000,00" />
-                          <uc:OcrTextInfo Region="354, 324, 3, 6" Text="1" />
-                          <uc:OcrTextInfo Region="358, 324, 17, 6" Text="Tau" />
-                          <uc:OcrTextInfo Region="458, 324, 33, 6" Text="BULLET" />
-                          <uc:OcrTextInfo Region="443, 350, 42, 6" Text="SEGUNDO" />
-                          <uc:OcrTextInfo Region="106, 420, 35, 6" Text="usace•" />
-                          <uc:OcrTextInfo Region="106, 437, 35, 6" Text="usocep" />
-                          <uc:OcrTextInfo Region="118, 446, 16, 6" Text="DCL" />
-                          <uc:OcrTextInfo Region="136, 446, 5, 6" Text="p" />
-                          <uc:OcrTextInfo Region="146, 449, 3, 1" Text="-" />
-                          <uc:OcrTextInfo Region="106, 463, 35, 6" Text="usacl_p" />
-                          <uc:OcrTextInfo Region="146, 466, 3, 1" Text="-" />
-                          <uc:OcrTextInfo Region="178, 421, 5, 5" Text="a" />
-                          <uc:OcrTextInfo Region="190, 420, 34, 9" Text="707.141" />
-                          <uc:OcrTextInfo Region="178, 438, 5, 5" Text="a" />
-                          <uc:OcrTextInfo Region="190, 434, 34, 14" Text="590.27i" />
-                          <uc:OcrTextInfo Region="190, 459, 34, 10" Text="648.881" />
-                          <uc:OcrTextInfo Region="190, 468, 34, 10" Text="649.341" />
-                          <uc:OcrTextInfo Region="178, 491, 5, 4" Text="d" />
-                          <uc:OcrTextInfo Region="190, 485, 34, 10" Text="650.201" />
-                          <uc:OcrTextInfo Region="178, 517, 5, 4" Text="z" />
-                          <uc:OcrTextInfo Region="190, 512, 34, 12" Text="668.co:" />
-                          <uc:OcrTextInfo Region="231, 402, 16, 7" Text="02'" />
-                          <uc:OcrTextInfo Region="249, 402, 19, 6" Text="2gf'" />
-                          <uc:OcrTextInfo Region="231, 420, 46, 6" Text="05/29'20" />
-                          <uc:OcrTextInfo Region="231, 437, 46, 6" Text="03'31.'20" />
-                          <uc:OcrTextInfo Region="231, 446, 46, 6" Text="08'31.'20" />
-                          <uc:OcrTextInfo Region="231, 463, 46, 6" Text="07/31'19" />
-                          <uc:OcrTextInfo Region="231, 472, 46, 6" Text="08'30/19" />
-                          <uc:OcrTextInfo Region="232, 489, 33, 6" Text="10'30,'" />
-                          <uc:OcrTextInfo Region="267, 489, 10, 6" Text="19" />
-                          <uc:OcrTextInfo Region="231, 515, 29, 7" Text="07'31" />
-                          <uc:OcrTextInfo Region="261, 516, 4, 5" Text="f" />
-                          <uc:OcrTextInfo Region="267, 515, 10, 6" Text="19" />
-                          <uc:OcrTextInfo Region="247, 562, 28, 12" Text="12" />
-                          <uc:OcrTextInfo Region="261, 583, 14, 12" Text="7" />
-                          <uc:OcrTextInfo Region="261, 604, 13, 11" Text="3" />
-                          <uc:OcrTextInfo Region="261, 624, 13, 12" Text="3" />
-                          <uc:OcrTextInfo Region="261, 645, 13, 12" Text="3" />
-                          <uc:OcrTextInfo Region="283, 350, 68, 7" Text="2S.OOO.OOO.OO" />
-                          <uc:OcrTextInfo Region="374, 350, 18, 6" Text="USO" />
-                          <uc:OcrTextInfo Region="397, 350, 25, 6" Text="25MM" />
-                          <uc:OcrTextInfo Region="283, 376, 68, 7" Text="25.000.000.00" />
-                          <uc:OcrTextInfo Region="374, 376, 18, 6" Text="OSO" />
-                          <uc:OcrTextInfo Region="397, 376, 25, 6" Text="25MM" />
-                          <uc:OcrTextInfo Region="293, 402, 58, 7" Text="-500.000_00" />
-                          <uc:OcrTextInfo Region="354, 402, 33, 6" Text="SCOIIA" />
-                          <uc:OcrTextInfo Region="294, 420, 57, 7" Text="-SOO.OOO.OO" />
-                          <uc:OcrTextInfo Region="285, 440, 2, 1" Text="-" />
-                          <uc:OcrTextInfo Region="290, 437, 7, 7" Text="1." />
-                          <uc:OcrTextInfo Region="299, 437, 52, 7" Text="aso.ooo_oo" />
-                          <uc:OcrTextInfo Region="374, 437, 5, 6" Text="2" />
-                          <uc:OcrTextInfo Region="294, 446, 57, 7" Text="-SOO.OOO.OO" />
-                          <uc:OcrTextInfo Region="354, 446, 58, 6" Text="SCOTIAaANK" />
-                          <uc:OcrTextInfo Region="294, 463, 57, 7" Text="-650.000,00" />
-                          <uc:OcrTextInfo Region="385, 463, 28, 6" Text="59'64" />
-                          <uc:OcrTextInfo Region="293, 472, 58, 7" Text="-SSO.OOO.OO" />
-                          <uc:OcrTextInfo Region="293, 485, 58, 11" Text="-SSO:OOO.OO" />
-                          <uc:OcrTextInfo Region="385, 489, 28, 6" Text="59'54" />
-                          <uc:OcrTextInfo Region="293, 515, 58, 7" Text="-SOO.OOO.OO" />
-                          <uc:OcrTextInfo Region="294, 533, 57, 7" Text="-SOO.OOO_OO" />
-                          <uc:OcrTextInfo Region="354, 533, 15, 6" Text="BCT" />
-                          <uc:OcrTextInfo Region="71, 544, 17, 10" Text="9D" />
-                          <uc:OcrTextInfo Region="153, 544, 33, 9" Text="ion';" />
-                          <uc:OcrTextInfo Region="844, 159, 31, 6" Text="Mktval" />
-                          <uc:OcrTextInfo Region="869, 211, 53, 7" Text="so.671.651" />
-                          <uc:OcrTextInfo Region="864, 280, 58, 7" Text="-2S.2C9.css" />
-                          <uc:OcrTextInfo Region="890, 376, 32, 7" Text="47.722" />
-                          <uc:OcrTextInfo Region="896, 446, 26, 7" Text="1.181" />
-                          <uc:OcrTextInfo Region="885, 463, 31, 7" Text="-sg.02" />
-                          <uc:OcrTextInfo Region="885, 472, 31, 7" Text="-58,83" />
-                          <uc:OcrTextInfo Region="497, 561, 200, 15" Text="Fx/BEMF/Trade" />
-                          <uc:OcrTextInfo Region="716, 562, 124, 12" Text="20257014" />
-                          <uc:OcrTextInfo Region="857, 561, 262, 13" Text="Notification-sell" />
-                          <uc:OcrTextInfo Region="74, 562, 60, 12" Text="1004" />
-                          <uc:OcrTextInfo Region="74, 583, 59, 12" Text="1003" />
-                          <uc:OcrTextInfo Region="74, 604, 60, 11" Text="1002" />
-                          <uc:OcrTextInfo Region="74, 625, 60, 11" Text="1001" />
-                          <uc:OcrTextInfo Region="75, 645, 58, 12" Text="1000" />
-                          <uc:OcrTextInfo Region="167, 561, 60, 15" Text="6/03" />
-                          <uc:OcrTextInfo Region="167, 582, 60, 15" Text="6/03" />
-                          <uc:OcrTextInfo Region="167, 602, 60, 15" Text="6/03" />
-                          <uc:OcrTextInfo Region="167, 623, 60, 15" Text="6/03" />
-                          <uc:OcrTextInfo Region="167, 643, 60, 16" Text="6/03" />
-                          <uc:OcrTextInfo Region="281, 565, 4, 9" Text=":" />
-                          <uc:OcrTextInfo Region="294, 562, 28, 12" Text="12" />
-                          <uc:OcrTextInfo Region="281, 586, 4, 9" Text=":" />
-                          <uc:OcrTextInfo Region="292, 583, 30, 12" Text="09" />
-                          <uc:OcrTextInfo Region="281, 606, 4, 9" Text=":" />
-                          <uc:OcrTextInfo Region="293, 603, 29, 13" Text="26" />
-                          <uc:OcrTextInfo Region="281, 627, 4, 9" Text=":" />
-                          <uc:OcrTextInfo Region="293, 624, 28, 12" Text="25" />
-                          <uc:OcrTextInfo Region="281, 647, 4, 10" Text=":" />
-                          <uc:OcrTextInfo Region="293, 645, 28, 12" Text="23" />
-                          <uc:OcrTextInfo Region="340, 562, 13, 12" Text="B" />
-                          <uc:OcrTextInfo Region="357, 561, 10, 13" Text="1" />
-                          <uc:OcrTextInfo Region="371, 561, 107, 17" Text="oomber-g" />
-                          <uc:OcrTextInfo Region="339, 582, 87, 17" Text="Today'" />
-                          <uc:OcrTextInfo Region="434, 586, 12, 9" Text="s" />
-                          <uc:OcrTextInfo Region="465, 582, 216, 16" Text="News/B100mberg" />
-                          <uc:OcrTextInfo Region="700, 583, 29, 16" Text="My" />
-                          <uc:OcrTextInfo Region="747, 583, 60, 12" Text="News" />
-                          <uc:OcrTextInfo Region="825, 582, 154, 16" Text="Categories" />
-                          <uc:OcrTextInfo Region="998, 583, 107, 16" Text="Summary" />
-                          <uc:OcrTextInfo Region="339, 604, 60, 12" Text="Mars" />
-                          <uc:OcrTextInfo Region="418, 602, 170, 17" Text="Report/Your" />
-                          <uc:OcrTextInfo Region="606, 604, 60, 12" Text="MARS" />
-                          <uc:OcrTextInfo Region="685, 602, 137, 13" Text="positions" />
-                          <uc:OcrTextInfo Region="842, 604, 90, 15" Text="Report" />
-                          <uc:OcrTextInfo Region="952, 602, 27, 13" Text="is" />
-                          <uc:OcrTextInfo Region="998, 602, 76, 17" Text="Ready" />
-                          <uc:OcrTextInfo Region="339, 624, 60, 12" Text="Mars" />
-                          <uc:OcrTextInfo Region="418, 623, 170, 17" Text="Report/Your" />
-                          <uc:OcrTextInfo Region="606, 625, 60, 11" Text="MARS" />
-                          <uc:OcrTextInfo Region="685, 623, 137, 13" Text="positions" />
-                          <uc:OcrTextInfo Region="842, 625, 90, 15" Text="Report" />
-                          <uc:OcrTextInfo Region="952, 623, 27, 13" Text="is" />
-                          <uc:OcrTextInfo Region="998, 623, 76, 17" Text="Ready" />
-                          <uc:OcrTextInfo Region="339, 645, 60, 12" Text="Mars" />
-                          <uc:OcrTextInfo Region="418, 643, 170, 17" Text="Report/Your" />
-                          <uc:OcrTextInfo Region="606, 645, 60, 12" Text="MARS" />
-                          <uc:OcrTextInfo Region="685, 643, 137, 14" Text="positions" />
-                          <uc:OcrTextInfo Region="842, 645, 90, 15" Text="Report" />
-                          <uc:OcrTextInfo Region="952, 643, 27, 14" Text="is" />
-                          <uc:OcrTextInfo Region="998, 643, 76, 17" Text="Ready" />
-                          <uc:OcrTextInfo Region="88, 677, 90, 12" Text="SuggesLed" />
-                          <uc:OcrTextInfo Region="188, 677, 83, 10" Text="Functions" />
-                          <uc:OcrTextInfo Region="317, 678, 60, 9" Text="USSW" />
-                          <uc:OcrTextInfo Region="392, 677, 49, 10" Text="Track" />
-                          <uc:OcrTextInfo Region="450, 681, 32, 6" Text="sura" />
-                          <uc:OcrTextInfo Region="485, 681, 9, 8" Text="p" />
-                          <uc:OcrTextInfo Region="503, 681, 16, 6" Text="ra" />
-                          <uc:OcrTextInfo Region="523, 679, 25, 8" Text="Les" />
-                          <uc:OcrTextInfo Region="556, 678, 11, 9" Text="&amp;" />
-                          <uc:OcrTextInfo Region="576, 677, 62, 10" Text="related" />
-                          <uc:OcrTextInfo Region="648, 677, 107, 10" Text="benchcnar-lcs" />
-                          <uc:OcrTextInfo Region="824, 678, 24, 9" Text="IR" />
-                          <uc:OcrTextInfo Region="850, 678, 26, 9" Text="DL" />
-                          <uc:OcrTextInfo Region="891, 678, 59, 9" Text="Access" />
-                          <uc:OcrTextInfo Region="958, 681, 9, 6" Text="a" />
-                          <uc:OcrTextInfo Region="969, 677, 11, 10" Text="II" />
-                          <uc:OcrTextInfo Region="988, 677, 18, 10" Text="Of" />
-                          <uc:OcrTextInfo Region="1013, 680, 40, 9" Text="your" />
-                          <uc:OcrTextInfo Region="1061, 681, 8, 6" Text="s" />
-                          <uc:OcrTextInfo Region="1071, 681, 9, 6" Text="a" />
-                          <uc:OcrTextInfo Region="1082, 677, 30, 10" Text="ved" />
-                          <uc:OcrTextInfo Region="1122, 678, 6, 9" Text="I" />
-                          <uc:OcrTextInfo Region="1130, 678, 10, 9" Text="R" />
-                          <uc:OcrTextInfo Region="1142, 678, 4, 9" Text="S" />
-                        </scg:List>
-                      </uc:CVCache.OcrTexts>
-                    </uc:CVCache>
-                  </p:CVScope.DesignTimeCache>
-                  <p:CVScope.OCREngine>
-                    <ActivityFunc x:TypeArguments="sd:Image, scg:IEnumerable(scg:KeyValuePair(sd:Rectangle, x:String))">
-                      <ActivityFunc.Argument>
-                        <DelegateInArgument x:TypeArguments="sd:Image" Name="Image" />
-                      </ActivityFunc.Argument>
-                      <ui:MicrosoftOCR FilterRegion="{x:Null}" Output="{x:Null}" Text="{x:Null}" ComputeSkewAngle="False" ExtractWords="True" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="MicrosoftOCR_1" Image="[Image]" Language="en" Profile="Screen" Scale="1" />
-                    </ActivityFunc>
-                  </p:CVScope.OCREngine>
-                  <p:CVScope.Target>
-                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="64ffcff55f18ad75d8407296dcf9db26" Selector="&lt;wnd app='teamviewer.exe' cls='TV_CClientWindowClass' title='Miguel Rodriguez - TeamViewer' /&gt;" WaitForReady="INTERACTIVE" />
-                  </p:CVScope.Target>
-                </p:CVScope>
               </Sequence>
             </ActivityAction>
           </ui:WindowScope.Body>
         </ui:WindowScope>
       </Sequence>
       <FlowStep.Next>
-        <x:Reference>__ReferenceID2</x:Reference>
+        <x:Reference>__ReferenceID0</x:Reference>
       </FlowStep.Next>
     </FlowStep>
-    <FlowStep x:Name="__ReferenceID6">
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <av:Point x:Key="ShapeLocation">130,254.5</av:Point>
-          <av:Size x:Key="ShapeSize">200,51</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">230,305.5 220,305.5 220,334.5</av:PointCollection>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-      <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Swap_saveExcel" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" WorkbookPath="[nombrepathexcel]">
-        <ui:ExcelApplicationScope.Body>
-          <ActivityAction x:TypeArguments="ui:WorkbookApplication">
-            <ActivityAction.Argument>
-              <DelegateInArgument x:TypeArguments="ui:WorkbookApplication" Name="ExcelWorkbookScope" />
-            </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="200,83" sap2010:WorkflowViewState.IdRef="Sequence_37">
-              <Sequence.Variables>
-                <Variable x:TypeArguments="sd1:DataTable" Name="readVariableexcel" />
-              </Sequence.Variables>
-              <sap:WorkflowViewStateService.ViewState>
-                <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                </scg:Dictionary>
-              </sap:WorkflowViewStateService.ViewState>
-            </Sequence>
-          </ActivityAction>
-        </ui:ExcelApplicationScope.Body>
-        <sap:WorkflowViewStateService.ViewState>
-          <scg:Dictionary x:TypeArguments="x:String, x:Object">
-            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          </scg:Dictionary>
-        </sap:WorkflowViewStateService.ViewState>
-      </ui:ExcelApplicationScope>
-      <FlowStep.Next>
-        <x:Reference>__ReferenceID3</x:Reference>
-      </FlowStep.Next>
-    </FlowStep>
-    <x:Reference>__ReferenceID4</x:Reference>
-    <x:Reference>__ReferenceID5</x:Reference>
-    <FlowStep x:Name="__ReferenceID7">
+    <FlowStep>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">130,146.58</av:Point>
           <av:Size x:Key="ShapeSize">200,66</av:Size>
-          <av:PointCollection x:Key="ConnectorLocation">230,212.58 230,254.5</av:PointCollection>
+          <av:PointCollection x:Key="ConnectorLocation">230,212.58 230,267</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence sap:VirtualizedContainerService.HintSize="568,2073" sap2010:WorkflowViewState.IdRef="Sequence_43">
+      <Sequence DisplayName="Open and save swp" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_43">
         <Sequence.Variables>
           <Variable x:TypeArguments="sd1:DataTable" Name="readVariableSwap" />
         </Sequence.Variables>
@@ -1052,13 +325,13 @@
             </InArgument>
           </ui:ReadRange.Range>
         </ui:ReadRange>
-        <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[readVariableSwap]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="526,1854" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
+        <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[readVariableSwap]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="526,2432" sap2010:WorkflowViewState.IdRef="ForEachRow_3">
           <ui:ForEachRow.Body>
             <ActivityAction x:TypeArguments="sd1:DataRow">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="sd1:DataRow" Name="row" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,1706" sap2010:WorkflowViewState.IdRef="Sequence_42">
+              <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="476,2284" sap2010:WorkflowViewState.IdRef="Sequence_42">
                 <Sequence.Variables>
                   <Variable x:TypeArguments="ui:GenericValue" Name="setvaluefromexcel" />
                 </Sequence.Variables>
@@ -1075,13 +348,13 @@
                     <InArgument x:TypeArguments="ui:GenericValue">[row(2).ToString]</InArgument>
                   </Assign.Value>
                 </Assign>
-                <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BLOOMBERG Tv_cclien'" sap:VirtualizedContainerService.HintSize="434,1130" sap2010:WorkflowViewState.IdRef="WindowScope_16" InformativeScreenshot="d49f008406579169f2c855683a6edeb5" Selector="&lt;wnd app='teamviewer.exe' cls='TV_CClientWindowClass' title='Miguel Rodriguez - TeamViewer' /&gt;">
+                <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BLOOMBERG Tv_cclien'" sap:VirtualizedContainerService.HintSize="434,692" sap2010:WorkflowViewState.IdRef="WindowScope_16" InformativeScreenshot="d49f008406579169f2c855683a6edeb5" Selector="&lt;wnd app='bplus.wtk2.exe' cls='wdm-DesktopWindow' title='1-BLOOMBERG' /&gt;">
                   <ui:WindowScope.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
                         <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                       </ActivityAction.Argument>
-                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,984" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,546" sap2010:WorkflowViewState.IdRef="Sequence_38">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1092,54 +365,24 @@
                             <ui:CursorPosition OffsetX="150" OffsetY="695" Position="TopLeft" />
                           </ui:Click.CursorPosition>
                           <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="15480e13a6975ded1f6e771766447567" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="15480e13a6975ded1f6e771766447567" Selector="&lt;wnd cls='BLPUserWClass' idx='2' /&gt;" WaitForReady="INTERACTIVE" />
                           </ui:Click.Target>
-                        </ui:Click>
-                        <ui:Click ClickType="CLICK_SINGLE" DelayBefore="500" DelayMS="200" DisplayName="Click 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_18" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-                          <ui:Click.CursorPosition>
-                            <ui:CursorPosition OffsetX="152" OffsetY="642" Position="TopLeft" />
-                          </ui:Click.CursorPosition>
-                          <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0e00499c50c7e050646a6d5431c2df61" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
-                          </ui:Click.Target>
-                        </ui:Click>
-                        <ui:Click ClickType="CLICK_SINGLE" DelayBefore="500" DelayMS="200" DisplayName="Click 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_19" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-                          <ui:Click.CursorPosition>
-                            <ui:CursorPosition OffsetX="23" OffsetY="38" Position="TopLeft" />
-                          </ui:Click.CursorPosition>
-                          <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="d6914b754c85e57f4b292e0f4a4e605d" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
-                          </ui:Click.Target>
-                        </ui:Click>
-                        <ui:Click ClickType="CLICK_SINGLE" DelayBefore="500" DelayMS="200" DisplayName="Click 'TV_REMOTEDESKTOP_CLASS'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_20" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
-                          <ui:Click.CursorPosition>
-                            <ui:CursorPosition OffsetX="51" OffsetY="41" Position="TopLeft" />
-                          </ui:Click.CursorPosition>
-                          <ui:Click.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="54d038887e4628c72b7484bdbe66a277" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
-                          </ui:Click.Target>
-                          <sap:WorkflowViewStateService.ViewState>
-                            <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                              <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                            </scg:Dictionary>
-                          </sap:WorkflowViewStateService.ViewState>
                         </ui:Click>
                         <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="500" DelayMS="700" DisplayName="Type Into 'TV_REMOTEDESKTOP_CLASS'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_9" SendWindowMessages="False" SimulateType="False" Text="[setvaluefromexcel+&quot;[k(f3)] swpm[k(enter)]&quot;]">
                           <ui:TypeInto.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="50c7a54c05e6dada97b259f70540eb84" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="50c7a54c05e6dada97b259f70540eb84" Selector="&lt;wnd cls='BLPUserWClass' idx='2' /&gt;" WaitForReady="INTERACTIVE" />
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
                         <ui:TypeInto DelayBetweenKeys="{x:Null}" Activate="True" ClickBeforeTyping="False" DelayBefore="1000" DelayMS="900" DisplayName="Type Into 'TV_REMOTEDESKTOP_CLASS'" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_10" SendWindowMessages="False" SimulateType="False" Text="6[k(enter)]">
                           <ui:TypeInto.Target>
-                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0e1ad096e3072fe3405e5e36fca7949c" Selector="&lt;wnd cls='TV_REMOTEDESKTOP_CLASS' title='TV 3.0' /&gt;" WaitForReady="INTERACTIVE" />
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="0e1ad096e3072fe3405e5e36fca7949c" Selector="&lt;wnd cls='BLPUserWClass' idx='2' /&gt;" WaitForReady="INTERACTIVE" />
                           </ui:TypeInto.Target>
                         </ui:TypeInto>
                       </Sequence>
                     </ActivityAction>
                   </ui:WindowScope.Body>
                 </ui:WindowScope>
-                <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BLOOMBERG Tv_cclien'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="WindowScope_17" InformativeScreenshot="fa507f1e77c398ebe8e1256eb8f6599a" Selector="&lt;wnd app='teamviewer.exe' cls='TV_CClientWindowClass' title='Miguel Rodriguez - TeamViewer' /&gt;">
+                <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'BLOOMBERG Tv_cclien'" sap:VirtualizedContainerService.HintSize="434,344" sap2010:WorkflowViewState.IdRef="WindowScope_17" InformativeScreenshot="fa507f1e77c398ebe8e1256eb8f6599a" Selector="&lt;wnd app='bplus.wtk2.exe' cls='wdm-DesktopWindow' title='1-BLOOMBERG' /&gt;">
                   <ui:WindowScope.Body>
                     <ActivityAction x:TypeArguments="x:Object">
                       <ActivityAction.Argument>
@@ -1156,12 +399,73 @@
                             <ui:CursorPosition OffsetX="0" OffsetY="3" Position="Center" />
                           </ui:ClickImage.CursorPosition>
                           <ui:ClickImage.Image>
-                            <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAAbCAYAAADh0qZQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAALhSURBVFhH1ZRNSFRRFMfPzDgzOs6kvplRMy0/ntZMSSQZNIuCiqgoDIloGRb0pVaQoVEUpZWaEUVBBlKQRYuIvnZ9L1pFyxatatmmsS8oIv79H07lc86UIy5eAz/u3P87977/O+fcK/zhP0AVnYYqOg1VdBqq6DRU0WmootNQRaehik5DFSePZ9zcRdwpxurZoYo2fMsFJXsFxb2C6ClBpI8cEuRvFuQYf+L8DXy+WxA+yOf9/M+4ksMcOxk3375nlqiijdw6QeEGQfmgoPapoP6lIPFaEHskmEkzkQ4a2ymoPk/tmaDxlSD+grEPabJHEFzKfUrS980CVUzHJ/AwU9PbaGyYJp4IzMc0RlMmzZgPBDXU4s9plPPyC8x8C9fNHbfP5FDFjLhLBXnLBJVXaJBmbDCz1fcEFScFobWMt/pR2WMSqGJm/MzoApo8R0O3R6m5Q+6S+yzxTYHBvvQtZmxeag3NRotY+oLUPHtUMZ0cZjHE/txIY6dp6CrHGyzzdZb/IjnLEg+wN5nF4m728CauyR1d66bJ1iVFuLWlFmvqAjC8rvT9/44q2uFLXMxe2T5BFY2YQzR5mSMPinV6fasYwyz5+SHBfLZDUBAI8PTzOsrzCko5H2quwEifibcnqjCwfgbqy/l84teSKtoI0kTpUcEsnuQKXitWz1mnOsoTnVPJGJrxMa5zoQvvtkXxviOKZFcMyQNzOFrMxpfjJkaOmfjUbyLZXYPkkRh6V4awLjahrKqiDQ/L5mGm3MzIWDws/68YL7PS2eDCjz0RfG8vwrf26G++tkXxcQeNt0bwocvA5zN1QE8ZLjWF0bLIC/eYd2VAFbPGRcIsbZzG61nyeSniLHtjoWB4RQAju8J4sz+MwWY/mqryUcuDVcCrTdtvHKo45WxlWa+t9mB7gwfVrIr1UVpcBlRxSnHx4JVN423AFrF6V4v5B6roNFTRaaiiszAMA05HEokEnE0CPwElg+hhHoeimgAAAABJRU5ErkJggg==" />
+                            <ui:ImageTarget Image="{x:Null}" Accuracy="0.8" TargetImageBase64="iVBORw0KGgoAAAANSUhEUgAAADgAAAApCAYAAABgDOogAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAU5SURBVGhD3Zf7T5tVGMdPL2/vhZbSG7RQbi1QCmxDl0y3scwMxWGKqLvo0DkVEeeIOrehg6GgRl2Ml+l0zuHUZWq8RaPOOFHnEn/zB01MnDGK0alb9i98fU4PDbg91jLISF6STwrfnvO+z3Oe20HQD3QOK+oJVtQTrKgnWFFPsKKeYEU9wYp6ghX1BCvqCVbUE6yoJ1hRT7CinmBFHqOA0UbYCYeAycUj1xg0tV4YJqHfDZbJvc7/2Ee6fK5cJ0wEZ8PMYUUWS6lAYK1A+FaBsu0CVU9MUfm4QMUjxIhA6GaBwktofVjAXERGk/HWiID3MoHSPto7QOtG/71f/l1+v0DkboGidgFbFTlqJcz0bnlAjD15woos1jIy/iaB6FaBmucEGj8WaPpcYMFxgYXf0OfXAs1fCiT2kaFbyNDLBTzLBdwXq9+j2wTqXhdIfUTrvprcQ3vlnob3BOLPC8SGBPxdAvYEOScz4UI6KNPO7BFwplQkZbQSL5HBH5KhxxTS8MYjAsl3yJnXyOgXBaqfUgdS/wYdyGe05gu1Tn7KvfWH6VkPCRR30iGWC2jFKpVn6VgWVsyJqZBOOE5puFRFVDpaO0ZReFc5IGn8lPiEHPiAdHJWftdIkWs6qg6g4X3ac5AiNqye4VlBz5Rpma2/uXFOwop546ijk6eUilJNxveqiEgHcpF8W0VeOue7StVnpjHJdGTeMUtYMW/MPhVN70rVJOrfoujIqOVAHkTkHjqYqwVczZQRBfSsbMdl3jFLWPH/kQZRKlmCVJMNqomUkYN1h1T95aLmWXKwX9Wcq+lcB31OM+IBG1IlDpQUWmAzG2A4+/35w4q5mTbT3C0CwW6K3i5luHRQNpNcJA6oxlO2gw7mCjVO5EjIzr6LYi70tYYweGUE7Q1eBN0azEZy8vwizIo89ALZSTW/6qRFq2gmbqJaks7tUXUlG0fiZUrDF6ackHPRfx1xLXGNipyvQzUWR62KYKb+ZBTpPatTHuxdF8N4fy323xDDQFsY6SYPkmEbnFYjrBRRY/7OsiJLZkx4p40Jau1Vu9X8kk5l2E/OPq0Gd5TqzNumLggmiriNcFsNKLBJjCiw82xa4sORvhqceawJv4+mcGJXEmPd5diwuAjVfgtF1AynxUhR5e08C1Zkydxk1qibTDndRqqfJGeeIQdpxsnGIaMo/5YXAb9sIAvVXJNXsLJCE9YlHdizyouxtB8H14bx6oYIy/jmCvy0M4EzjyZx6uF6nBypw/c7anD0zorM99tWFqO93oWWqA0uOjDO1mmwIoulRN0yZPRCNwqU9EwRvk2la2ijSl0H3UTk/TJTW3TSyWIzhi8twA+3BHGyP4I/t8fw187KnPw9WIVTw9U4PRLH6VHFxFA1DneX4q6lXnSm3PA5TKyt02BFHqoTOeTlbUamqrxnngPp0x3LdsZ6nxlDS1z4bmMxJm4PYOKOICb6cvPb5hD+uI8OY5AOY5icJn55IIY3u0O4t9WD9Qvc8Dvn0sFZ4LcbsDyiobfZjv5FjpzsayvE8fU+/NobxM9bwjixtRTjvWEcWOPHEKV4d4sbyyptaAxbqBbnMEUvFF1xGw51ePFjTxDf9gRwrMeP3as96EzaEaVa9lIj0vL/d4oV55UVMQ0PtjrxSroAA8uc6ErasKhUyzhn1wwZ52YwE1lxXokXm9BRa8H1TVYsjphRROktR8IMZt90WHFesVKECqj9e2heOmj2ms7PsSysqCdYUU+wop5gRT3BivohEAhAz4h0Og09IzRNg37R8A+NBEntG1lOowAAAABJRU5ErkJggg==" />
                           </ui:ClickImage.Image>
                           <ui:ClickImage.Target>
                             <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
                           </ui:ClickImage.Target>
                         </ui:ClickImage>
+                      </Sequence>
+                    </ActivityAction>
+                  </ui:WindowScope.Body>
+                </ui:WindowScope>
+                <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window 'EXCEL.EXE SLP30A4C'" sap:VirtualizedContainerService.HintSize="434,976" sap2010:WorkflowViewState.IdRef="WindowScope_18" InformativeScreenshot="7bc2370ec02250b8d84ba7080449bbc5" Selector="&lt;wnd app='excel.exe' cls='XLMAIN' omit:title='SLP30A4C - Excel' /&gt;">
+                  <ui:WindowScope.Body>
+                    <ActivityAction x:TypeArguments="x:Object">
+                      <ActivityAction.Argument>
+                        <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
+                      </ActivityAction.Argument>
+                      <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="376,830" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                        <sap:WorkflowViewStateService.ViewState>
+                          <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                          </scg:Dictionary>
+                        </sap:WorkflowViewStateService.ViewState>
+                        <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="SendHotkey_11" Key="f12" KeyModifiers="None" SendWindowMessages="False" SpecialKey="True">
+                          <ui:SendHotkey.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                          </ui:SendHotkey.Target>
+                        </ui:SendHotkey>
+                        <ui:TypeInto DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Type Into 'Edit'" EmptyField="True" sap:VirtualizedContainerService.HintSize="334,134" sap2010:WorkflowViewState.IdRef="TypeInto_11" SendWindowMessages="False" SimulateType="False" Text="[&quot;bot\&quot;+setvaluefromexcel+&quot;.xlsx[k(enter)]&quot;]">
+                          <ui:TypeInto.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="4b1918696ac813597cd4bd2f054a3b13" Selector="&lt;wnd app='excel.exe' cls='#32770' title='Save As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" WaitForReady="INTERACTIVE" />
+                          </ui:TypeInto.Target>
+                        </ui:TypeInto>
+                        <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_21" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                          <ui:Click.CursorPosition>
+                            <ui:CursorPosition Position="Center">
+                              <ui:CursorPosition.OffsetX>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetX>
+                              <ui:CursorPosition.OffsetY>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetY>
+                            </ui:CursorPosition>
+                          </ui:Click.CursorPosition>
+                          <ui:Click.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="98453ba21296279be6ae02fc8aa19aea" Selector="&lt;wnd app='excel.exe' cls='#32770' title='Save As' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" WaitForReady="INTERACTIVE" />
+                          </ui:Click.Target>
+                        </ui:Click>
+                        <ui:Click DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" DisplayName="Click 'Button'" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="Click_22" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="False">
+                          <ui:Click.CursorPosition>
+                            <ui:CursorPosition Position="Center">
+                              <ui:CursorPosition.OffsetX>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetX>
+                              <ui:CursorPosition.OffsetY>
+                                <InArgument x:TypeArguments="x:Int32" />
+                              </ui:CursorPosition.OffsetY>
+                            </ui:CursorPosition>
+                          </ui:Click.CursorPosition>
+                          <ui:Click.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" TimeoutMS="{x:Null}" InformativeScreenshot="96fbd5bdfad7fd11d87f2a5c7ea34867" Selector="&lt;wnd app='excel.exe' cls='#32770' title='Confirm Save As' /&gt;&lt;wnd aaname='Confirm Save As' cls='DirectUIHWND' /&gt;&lt;wnd aaname='Yes' cls='Button' title='&amp;amp;Yes' /&gt;" WaitForReady="INTERACTIVE" />
+                          </ui:Click.Target>
+                        </ui:Click>
+                        <ui:SendHotkey DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" Activate="True" ClickBeforeTyping="False" DisplayName="Send Hotkey" EmptyField="False" sap:VirtualizedContainerService.HintSize="334,116" sap2010:WorkflowViewState.IdRef="SendHotkey_12" Key="f4" KeyModifiers="Ctrl" SendWindowMessages="False" SpecialKey="True">
+                          <ui:SendHotkey.Target>
+                            <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" TimeoutMS="{x:Null}" WaitForReady="INTERACTIVE" />
+                          </ui:SendHotkey.Target>
+                        </ui:SendHotkey>
                       </Sequence>
                     </ActivityAction>
                   </ui:WindowScope.Body>
@@ -1172,7 +476,7 @@
         </ui:ForEachRow>
       </Sequence>
       <FlowStep.Next>
-        <x:Reference>__ReferenceID6</x:Reference>
+        <x:Reference>__ReferenceID1</x:Reference>
       </FlowStep.Next>
     </FlowStep>
   </Flowchart>
