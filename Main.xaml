@@ -170,7 +170,7 @@
                       <av:PointCollection x:Key="ConnectorLocation">390,543 390,660.5 0,660.5 0,539.5 120,539.5 120,569.5</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <Sequence DisplayName="nuevo reporte" sap:VirtualizedContainerService.HintSize="554,3334" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                  <Sequence DisplayName="nuevo reporte" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_7">
                     <Sequence.Variables>
                       <Variable x:TypeArguments="sd:DataTable" Name="resumenTabla" />
                       <Variable x:TypeArguments="sd:DataTable" Name="headerTable" />
@@ -293,14 +293,14 @@
                               <av:Size x:Key="ShapeSize">200,66</av:Size>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence DisplayName="envio mail" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <Sequence DisplayName="envio mail" sap:VirtualizedContainerService.HintSize="376,237" sap2010:WorkflowViewState.IdRef="Sequence_8">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <ui:SendMail Bcc="{x:Null}" Cc="{x:Null}" From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Body="Adjunto Excel con asiento mensual MTM Bloomberg" DisplayName="Send SMTP Mail Message" Email="robot@bluedigitaltech.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,147" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="enjambre" Port="465" SecureConnection="Auto" Server="mail.bluedigitaltech.com" Subject="Asiento Mensual MTM Bloomberg" To="rodrigo.neira@bluedigitaltech.Com">
+                            <ui:SendMail From="{x:Null}" MailMessage="{x:Null}" Name="{x:Null}" TimeoutMS="{x:Null}" Bcc="rodrigo.neira@bluedigitaltech.Com" Body="Adjunto Excel con asiento mensual MTM Bloomberg" Cc="sonnia.gomez@ultranav.cl" DisplayName="Send SMTP Mail Message" Email="robot@bluedigitaltech.com" EnableSSL="True" sap:VirtualizedContainerService.HintSize="334,145" sap2010:WorkflowViewState.IdRef="SendMail_1" IsBodyHtml="False" Password="enjambre" Port="465" SecureConnection="Auto" Server="mail.bluedigitaltech.com" Subject="Asiento Mensual MTM Bloomberg" To="Josetomas.lira@ultranav.cl">
                               <ui:SendMail.Files>
                                 <scg:List x:TypeArguments="InArgument(x:String)" Capacity="4">
                                   <InArgument x:TypeArguments="x:String">[rutaBase+"Asiento_Bloomberg"+Now().tostring("MMM")+".xlsx"]</InArgument>
