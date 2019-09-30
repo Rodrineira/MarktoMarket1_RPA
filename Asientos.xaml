@@ -343,7 +343,7 @@
                           <av:PointCollection x:Key="ConnectorLocation">430,511 400,511 400,431 200,431</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Sequence DisplayName="ArmaResumenSwap" sap:VirtualizedContainerService.HintSize="510,3047" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                      <Sequence DisplayName="ArmaResumenSwap" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_55">
                         <Sequence.Variables>
                           <Variable x:TypeArguments="sd:DataTable" Name="readTableFrw" />
                           <Variable x:TypeArguments="sd:DataTable" Name="readTable" />
@@ -353,7 +353,7 @@
                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="468,2955" sap2010:WorkflowViewState.IdRef="Sequence_54">
+                        <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="478,3224" sap2010:WorkflowViewState.IdRef="Sequence_54">
                           <Sequence.Variables>
                             <Variable x:TypeArguments="x:Int32" Name="indexRow1" />
                             <Variable x:TypeArguments="sd:DataTable" Name="addColumna" />
@@ -361,23 +361,24 @@
                             <Variable x:TypeArguments="x:Object" Name="ResultSuma" />
                             <Variable x:TypeArguments="sd:DataTable" Name="readSuma1" />
                             <Variable x:TypeArguments="x:Object" Name="ResultSuma1" />
+                            <Variable x:TypeArguments="sd:DataTable" Name="readSumaCero" />
                           </Sequence.Variables>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:ReadRange AddHeaders="True" DataTable="[readTableFrw]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="426,87" sap2010:WorkflowViewState.IdRef="ReadRange_20" SheetName="Variables" WorkbookPath="[rutaRepo]">
+                          <ui:ReadRange AddHeaders="True" DataTable="[readTableFrw]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="436,87" sap2010:WorkflowViewState.IdRef="ReadRange_20" SheetName="Variables" WorkbookPath="[rutaRepo]">
                             <ui:ReadRange.Range>
                               <InArgument x:TypeArguments="x:String">
                                 <Literal x:TypeArguments="x:String" Value="" />
                               </InArgument>
                             </ui:ReadRange.Range>
                           </ui:ReadRange>
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="426,62" sap2010:WorkflowViewState.IdRef="WriteLine_17" Text="swp read range" />
-                          <ui:BuildDataTable DataTable="[addColumna]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="426,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_7" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Corto_x0020_Plazo&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Largo_x0020_Plazo&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Total&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="426,62" sap2010:WorkflowViewState.IdRef="WriteLine_18" Text="swp read resumene" />
-                          <ui:ForEachRow CurrentIndex="[indexRow1]" DataTable="[readTableFrw]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="426,1590" sap2010:WorkflowViewState.IdRef="ForEachRow_16">
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="436,62" sap2010:WorkflowViewState.IdRef="WriteLine_17" Text="swp read range" />
+                          <ui:BuildDataTable DataTable="[addColumna]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="436,59" sap2010:WorkflowViewState.IdRef="BuildDataTable_7" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Corto_x0020_Plazo&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Largo_x0020_Plazo&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Total&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
+                          <WriteLine DisplayName="Write Line" sap:VirtualizedContainerService.HintSize="436,62" sap2010:WorkflowViewState.IdRef="WriteLine_18" Text="swp read resumene" />
+                          <ui:ForEachRow CurrentIndex="[indexRow1]" DataTable="[readTableFrw]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="436,1590" sap2010:WorkflowViewState.IdRef="ForEachRow_16">
                             <ui:ForEachRow.Body>
                               <ActivityAction x:TypeArguments="sd:DataRow">
                                 <ActivityAction.Argument>
@@ -471,13 +472,43 @@
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
                           </ui:ForEachRow>
-                          <ui:WriteRange AddHeaders="True" DataTable="[addColumna]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="426,115" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="Resumen" StartingCell="B1" WorkbookPath="[rutaRepo]" />
-                          <ui:ReadRange AddHeaders="True" DataTable="[readSuma]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="426,87" sap2010:WorkflowViewState.IdRef="ReadRange_27" Range="D1:D25" SheetName="Asiento Contable Nav" WorkbookPath="[rutaRepo]" />
-                          <da:SumActivity Select="{x:Null}" ColumnName="columna4" ConvertInputColumn="Double" DisplayName="Sum" sap:VirtualizedContainerService.HintSize="426,22" sap2010:WorkflowViewState.IdRef="SumActivity_25" InputTable="[readSuma]" NullValue="0" Result="[ResultSuma]" />
-                          <ui:WriteCell Cell="D26" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="426,115" sap2010:WorkflowViewState.IdRef="WriteCell_46" SheetName="Asiento Contable Nav" Text="[ResultSuma.ToString]" WorkbookPath="[rutaRepo]" />
-                          <ui:ReadRange AddHeaders="True" DataTable="[readSuma1]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="426,87" sap2010:WorkflowViewState.IdRef="ReadRange_28" Range="D1:D5" SheetName="Asiento Contable" WorkbookPath="[rutaRepo]" />
-                          <da:SumActivity Select="{x:Null}" ColumnName="columna4" ConvertInputColumn="Double" DisplayName="Sum" sap:VirtualizedContainerService.HintSize="426,22" sap2010:WorkflowViewState.IdRef="SumActivity_26" InputTable="[readSuma1]" NullValue="0" Result="[ResultSuma1]" />
-                          <ui:WriteCell Cell="D6" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="426,115" sap2010:WorkflowViewState.IdRef="WriteCell_47" SheetName="Asiento Contable" Text="[ResultSuma1.ToString]" WorkbookPath="[rutaRepo]" />
+                          <ui:WriteRange AddHeaders="True" DataTable="[addColumna]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="436,115" sap2010:WorkflowViewState.IdRef="WriteRange_6" SheetName="Resumen" StartingCell="B1" WorkbookPath="[rutaRepo]" />
+                          <ui:ReadRange AddHeaders="True" DataTable="[readSuma]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="436,87" sap2010:WorkflowViewState.IdRef="ReadRange_27" Range="C1:C25" SheetName="Asiento Contable Nav" WorkbookPath="[rutaRepo]" />
+                          <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="436,229" sap2010:WorkflowViewState.IdRef="CommentOut_11">
+                            <ui:CommentOut.Body>
+                              <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="376,151" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                                <sap:WorkflowViewStateService.ViewState>
+                                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                  </scg:Dictionary>
+                                </sap:WorkflowViewStateService.ViewState>
+                                <ui:FilterDataTable DataTable="[readSuma]" DisplayName="Filter Data Table" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="334,59" sap2010:WorkflowViewState.IdRef="FilterDataTable_7" OutputDataTable="[readSumaCero]" SelectColumnsMode="Keep">
+                                  <ui:FilterDataTable.Filters>
+                                    <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
+                                      <ui:FilterOperationArgument BooleanOperator="And" Operator="NOTEQ">
+                                        <ui:FilterOperationArgument.Column>
+                                          <InArgument x:TypeArguments="x:String">["columna4"]</InArgument>
+                                        </ui:FilterOperationArgument.Column>
+                                        <ui:FilterOperationArgument.Operand>
+                                          <InArgument x:TypeArguments="x:String">["0"]</InArgument>
+                                        </ui:FilterOperationArgument.Operand>
+                                      </ui:FilterOperationArgument>
+                                    </scg:List>
+                                  </ui:FilterDataTable.Filters>
+                                  <ui:FilterDataTable.SelectColumns>
+                                    <scg:List x:TypeArguments="InArgument" Capacity="4">
+                                      <x:Null />
+                                    </scg:List>
+                                  </ui:FilterDataTable.SelectColumns>
+                                </ui:FilterDataTable>
+                              </Sequence>
+                            </ui:CommentOut.Body>
+                          </ui:CommentOut>
+                          <da:SumActivity Select="{x:Null}" ColumnName="columna4" ConvertInputColumn="Double" DisplayName="1Sum" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="SumActivity_25" InputTable="[readSuma]" NullValue="0" Result="[ResultSuma]" />
+                          <ui:WriteCell Cell="C26" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="436,115" sap2010:WorkflowViewState.IdRef="WriteCell_46" SheetName="Asiento Contable Nav" Text="[ResultSuma.ToString]" WorkbookPath="[rutaRepo]" />
+                          <ui:ReadRange AddHeaders="True" DataTable="[readSuma1]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="436,87" sap2010:WorkflowViewState.IdRef="ReadRange_28" Range="C1:C5" SheetName="Asiento Contable" WorkbookPath="[rutaRepo]" />
+                          <da:SumActivity Select="{x:Null}" ColumnName="columna4" ConvertInputColumn="Double" DisplayName="2Sum" sap:VirtualizedContainerService.HintSize="436,22" sap2010:WorkflowViewState.IdRef="SumActivity_26" InputTable="[readSuma1]" NullValue="0" Result="[ResultSuma1]" />
+                          <ui:WriteCell Cell="C6" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="436,115" sap2010:WorkflowViewState.IdRef="WriteCell_47" SheetName="Asiento Contable" Text="[ResultSuma1.ToString]" WorkbookPath="[rutaRepo]" />
                         </Sequence>
                       </Sequence>
                       <FlowStep.Next>
@@ -489,7 +520,7 @@
                               <av:PointCollection x:Key="ConnectorLocation">100,465 100,560.5 145,560.5</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence DisplayName="ArmaResumenForward" sap:VirtualizedContainerService.HintSize="200,68" sap2010:WorkflowViewState.IdRef="Sequence_48">
+                          <Sequence DisplayName="ArmaResumenForward" sap:VirtualizedContainerService.HintSize="510,2550" sap2010:WorkflowViewState.IdRef="Sequence_48">
                             <Sequence.Variables>
                               <Variable x:TypeArguments="sd:DataTable" Name="readTableFrw" />
                               <Variable x:TypeArguments="sd:DataTable" Name="readTable" />
@@ -613,9 +644,9 @@
                                 </sap:WorkflowViewStateService.ViewState>
                               </ui:ForEachRow>
                               <ui:WriteRange AddHeaders="False" DataTable="[addColumna]" DisplayName="Write Range" sap:VirtualizedContainerService.HintSize="426,115" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="Resumen" StartingCell="B16" WorkbookPath="[rutaRepo]" />
-                              <ui:ReadRange AddHeaders="True" DataTable="[readSuma]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="426,87" sap2010:WorkflowViewState.IdRef="ReadRange_26" Range="D1:D13" SheetName="Asiento Contable FRW" WorkbookPath="[rutaRepo]" />
+                              <ui:ReadRange AddHeaders="True" DataTable="[readSuma]" DisplayName="Read Range" sap:VirtualizedContainerService.HintSize="426,87" sap2010:WorkflowViewState.IdRef="ReadRange_26" Range="C1:C13" SheetName="Asiento Contable FRW" WorkbookPath="[rutaRepo]" />
                               <da:SumActivity Select="{x:Null}" ColumnName="columna4" ConvertInputColumn="Integer" DisplayName="Sum" sap:VirtualizedContainerService.HintSize="426,22" sap2010:WorkflowViewState.IdRef="SumActivity_24" InputTable="[readSuma]" NullValue="0" Result="[ResultSuma]" />
-                              <ui:WriteCell Cell="D14" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="426,115" sap2010:WorkflowViewState.IdRef="WriteCell_45" SheetName="Asiento Contable FRW" Text="[ResultSuma.ToString]" WorkbookPath="[rutaRepo]" />
+                              <ui:WriteCell Cell="C14" DisplayName="Write Cell" sap:VirtualizedContainerService.HintSize="426,115" sap2010:WorkflowViewState.IdRef="WriteCell_45" SheetName="Asiento Contable FRW" Text="[ResultSuma.ToString]" WorkbookPath="[rutaRepo]" />
                             </Sequence>
                           </Sequence>
                           <FlowStep.Next>
