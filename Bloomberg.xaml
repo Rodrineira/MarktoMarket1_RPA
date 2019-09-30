@@ -68,11 +68,11 @@
         <av:Point x:Key="ShapeLocation">270,2.5</av:Point>
         <av:Size x:Key="ShapeSize">60,75</av:Size>
         <x:Double x:Key="Height">735.5</x:Double>
-        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 360,107.5 360,300 330,300</av:PointCollection>
+        <av:PointCollection x:Key="ConnectorLocation">300,77.5 300,107.5 230,107.5 230,146.58</av:PointCollection>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
     <Flowchart.StartNode>
-      <x:Reference>__ReferenceID1</x:Reference>
+      <x:Reference>__ReferenceID2</x:Reference>
     </Flowchart.StartNode>
     <FlowStep x:Name="__ReferenceID0">
       <sap:WorkflowViewStateService.ViewState>
@@ -81,7 +81,7 @@
           <av:Size x:Key="ShapeSize">200,66</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="saveExcelFWD" sap:VirtualizedContainerService.HintSize="476,1144" sap2010:WorkflowViewState.IdRef="Sequence_22">
+      <Sequence DisplayName="saveExcelFWD" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_22">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -301,7 +301,7 @@
         <x:Reference>__ReferenceID0</x:Reference>
       </FlowStep.Next>
     </FlowStep>
-    <FlowStep>
+    <FlowStep x:Name="__ReferenceID2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <av:Point x:Key="ShapeLocation">130,146.58</av:Point>
