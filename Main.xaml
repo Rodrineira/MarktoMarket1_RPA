@@ -293,7 +293,7 @@
                               <av:Size x:Key="ShapeSize">200,66</av:Size>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <Sequence DisplayName="envio mail" sap:VirtualizedContainerService.HintSize="376,237" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                          <Sequence DisplayName="envio mail" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_8">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -486,17 +486,17 @@
             <InArgument x:TypeArguments="s:DateTime">[New datetime(now.Date.Year, now.Date.Month,1).AddMonths(1).AddDays(-1)]</InArgument>
           </Assign.Value>
         </Assign>
-        <If Condition="[Now().tostring(&quot;dddd&quot;) = &quot;Friday&quot;]" sap:VirtualizedContainerService.HintSize="1839,602" sap2010:WorkflowViewState.IdRef="If_5">
+        <If Condition="[Now().tostring(&quot;dddd&quot;) = &quot;Friday&quot;]" sap:VirtualizedContainerService.HintSize="1839,596" sap2010:WorkflowViewState.IdRef="If_5">
           <If.Then>
-            <Sequence sap:VirtualizedContainerService.HintSize="1225,452" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <Sequence sap:VirtualizedContainerService.HintSize="1225,448" sap2010:WorkflowViewState.IdRef="Sequence_3">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <If Condition="[dayMonth.ToString(&quot;dd&quot;) = &quot;30&quot;]" sap:VirtualizedContainerService.HintSize="1183,360" sap2010:WorkflowViewState.IdRef="If_3">
+              <If Condition="[dayMonth.ToString(&quot;dd&quot;) = &quot;30&quot;]" sap:VirtualizedContainerService.HintSize="1183,356" sap2010:WorkflowViewState.IdRef="If_3">
                 <If.Then>
-                  <If Condition="[Now.AddDays(2).ToString(&quot;dd&quot;) = &quot;01&quot;]" sap:VirtualizedContainerService.HintSize="569,210" sap2010:WorkflowViewState.IdRef="If_1">
+                  <If Condition="[Now.AddDays(2).ToString(&quot;dd&quot;) = &quot;01&quot;]" sap:VirtualizedContainerService.HintSize="569,208" sap2010:WorkflowViewState.IdRef="If_1">
                     <If.Then>
                       <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_2">
                         <Assign.To>
@@ -520,7 +520,7 @@
                   </If>
                 </If.Then>
                 <If.Else>
-                  <If Condition="[Now.AddDays(3).ToString(&quot;dd&quot;) = &quot;01&quot;]" sap:VirtualizedContainerService.HintSize="569,210" sap2010:WorkflowViewState.IdRef="If_2">
+                  <If Condition="[Now.AddDays(3).ToString(&quot;dd&quot;) = &quot;01&quot;]" sap:VirtualizedContainerService.HintSize="569,208" sap2010:WorkflowViewState.IdRef="If_2">
                     <If.Then>
                       <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_4">
                         <Assign.To>
@@ -547,7 +547,7 @@
             </Sequence>
           </If.Then>
           <If.Else>
-            <If Condition="[dayMonth.ToString(&quot;dd&quot;) = Now().tostring(&quot;dd&quot;)]" sap:VirtualizedContainerService.HintSize="569,210" sap2010:WorkflowViewState.IdRef="If_4">
+            <If Condition="[dayMonth.ToString(&quot;dd&quot;) = Now().tostring(&quot;dd&quot;)]" sap:VirtualizedContainerService.HintSize="569,208" sap2010:WorkflowViewState.IdRef="If_4">
               <If.Then>
                 <Assign sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_6">
                   <Assign.To>
